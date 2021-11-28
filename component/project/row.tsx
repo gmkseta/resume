@@ -10,7 +10,7 @@ export default function ProjectRow({ payload }: PropsWithChildren<{ payload: IPr
   return (
     <EmptyRowCol>
       {payload.list.map((item, index) => {
-        return <CommonRows key={index.toString()} payload={serialize(item)} index={index} />;
+        return <CommonRows key={index.toString()} payload={serialize(item)} index={index}/>;
       })}
     </EmptyRowCol>
   );

@@ -12,7 +12,7 @@ export default function SkillRow({
     <div>
       {index > 0 ? <hr /> : ''}
       <Row>
-        <Col sm={12} md={3} className="text-md-right">
+        <Col sm={12} md={3} className="text-md-end">
           <h4 style={Style.gray}>{skill.category}</h4>
         </Col>
         <Col sm={12} md={9}>
@@ -71,24 +71,24 @@ function createBadge(level?: ISkill.Item['level']) {
     return '';
   }
 
-  const color = (() => {
+  const options = (() => {
     switch (level) {
       case 3: {
-        return 'primary';
+        return {color: 'primary'};
       }
       case 2: {
-        return 'secondary';
+        return {color: 'secondary'};
       }
       case 1:
       default: {
-        return 'light';
+        return {color: 'light', className: 'text-dark'};
       }
     }
   })();
 
   return (
     <span>
-      <Badge pill color={color}>
+      <Badge pill {...options}>
         {level}
       </Badge>{' '}
     </span>

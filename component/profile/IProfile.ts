@@ -13,7 +13,7 @@ export declare namespace IProfile {
     /**
      * ### 프로필 이미지
      */
-    image: string;
+    image: string | StaticImageData;
     /** ### 이름 Object */
     name: {
       /** ### 이름 */
@@ -24,7 +24,7 @@ export declare namespace IProfile {
     /** ### 연락 수단 목록 */
     contact: Contact[];
     /** ### 공지 */
-    notice: {
+    notice?: {
       /** ### 공지 내용 */
       title: string;
       /**

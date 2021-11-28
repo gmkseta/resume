@@ -9,7 +9,7 @@ export default function ProfileContact({
 }: PropsWithChildren<{ payload: IProfile.Contact }>) {
   return (
     <Row className="pb-2">
-      <Col xs={1} className="text-right">
+      <Col xs={1} className="text-end">
         <FontAwesomeIcon icon={payload.icon} />
       </Col>
       <Col xs="auto">{createLink(payload)}</Col>
@@ -19,7 +19,7 @@ export default function ProfileContact({
 
 function createLink(payload: IProfile.Contact) {
   if (payload.badge) {
-    return <Badge color="light">{payload.title || payload.link}</Badge>;
+    return <Badge color="light" className='text-black'>{payload.title || payload.link}</Badge>;
   }
   return payload.link ? (
     <HrefTargetBlank url={payload.link} text={payload.title} />

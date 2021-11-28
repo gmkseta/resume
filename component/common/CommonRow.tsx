@@ -7,16 +7,15 @@ import { CommonDescription } from './CommonDescription';
 export function CommonRows({
   index,
   payload,
-}: PropsWithChildren<{ payload: IRow.Payload; index: number }>) {
+}: PropsWithChildren<{ payload: IRow.Payload; index: number}>) {
   const { left, right } = payload;
 
   const isNeedDescriptionPadding = !!(right.title || right.subTitle);
-
   return (
     <div>
       {index > 0 ? <hr /> : ''}
       <Row>
-        <Col sm={12} md={3} className="text-md-right">
+        <Col sm={12} md={3} className="text-md-end">
           <Row>
             <Col md={12}>
               <h4 style={Style.gray}>{left.title}</h4>

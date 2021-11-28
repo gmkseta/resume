@@ -33,7 +33,7 @@ npm run dev
 
 ## Structure
 
-- asset/
+- public/assets/
   - images, favicon
 - component/
   - React Components

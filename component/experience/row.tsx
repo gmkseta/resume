@@ -13,7 +13,7 @@ export default function ExperienceRow({
     <div>
       {index > 0 ? <hr /> : ''}
       <Row>
-        <Col sm={12} md={3} className="text-md-right">
+        <Col sm={12} md={3} className="text-md-end">
           {createWorkingPeriod(item.startedAt, item.endedAt)}
         </Col>
         <Col sm={12} md={9}>
@@ -44,7 +44,7 @@ function createSkillKeywords(skillKeywords?: string[]) {
             style={Style.skillKeywordBadge}
             key={index.toString()}
             color="secondary"
-            className="mr-1"
+            className="me-1"
           >
             {keyword}
           </Badge>
@@ -81,9 +81,9 @@ function createWorkingPeriod(startedAtString: string, endedAtString?: string) {
       <Col md={12} xs={isWorking ? 7 : 9}>
         <h4 style={Style.gray}>{periodTitle}</h4>
       </Col>
-      <Col md={12} xs={isWorking ? 5 : 3} className="text-md-right text-center">
+      <Col md={12} xs={isWorking ? 5 : 3} className="text-md-end text-center">
         {isWorking ? (
-          <Badge color="primary" className="mr-1">
+          <Badge color="primary" className="me-1">
             재직 중
           </Badge>
         ) : (

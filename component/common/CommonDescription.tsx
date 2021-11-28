@@ -1,6 +1,7 @@
 import { PropsWithChildren, CSSProperties } from 'react';
 import { IRow } from './IRow';
 import { HrefTargetBlank } from '.';
+import React from 'react';
 
 /** Description Recusion Generator */
 export function CommonDescription({
@@ -13,17 +14,17 @@ export function CommonDescription({
         <ul className={option?.padding ? 'pt-2' : ''}>
           {descriptions.map((description, descIndex) => {
             return (
-              <>
-                <Description description={description} key={descIndex.toString()} />
+              <React.Fragment key={descIndex}>
+                <Description description={description} key={'root'+descIndex} />
                 {description.descriptions ? (
                   <DescriptionRecursion
                     descriptions={description.descriptions}
-                    key={descIndex.toString()}
+                    key={descIndex}
                   />
                 ) : (
                   ''
                 )}
-              </>
+              </React.Fragment>
             );
           })}
         </ul>
@@ -42,17 +43,17 @@ function DescriptionRecursion({
     <ul>
       {descriptions.map((description, index) => {
         return (
-          <>
-            <Description description={description} key={index.toString()} />
+          <React.Fragment key={index}>
+            <Description description={description} key={index} />
             {description.descriptions ? (
               <DescriptionRecursion
                 descriptions={description.descriptions}
-                key={index.toString()}
+                key={index}
               />
             ) : (
               ''
             )}
-          </>
+          </React.Fragment>
         );
       })}
     </ul>

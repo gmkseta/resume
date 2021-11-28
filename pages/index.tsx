@@ -23,7 +23,7 @@ function Yosume() {
       <NextSeo {...Payload._global.seo} />
       <Head>
         <title>{Payload._global.headTitle}</title>
-        <link rel="shortcut icon" href={Payload._global.favicon} />
+        <link rel="shortcut icon" href="/assets/favicon.ico" />
       </Head>
       <Container style={Style.global}>
         <Profile.Component payload={Payload.profile} />

@@ -10,11 +10,6 @@ export declare namespace IGlobal {
     headTitle: string;
 
     /**
-     * ### favicon 이미지
-     */
-    favicon: string;
-
-    /**
      * ### SEO Properties
      *
      * @description OpenGraph 메타 태그를 포함한 SEO 를 위한 요소를 정의한다. `next-seo` 를 사용했으므로 해당 패키지를 참고한다.

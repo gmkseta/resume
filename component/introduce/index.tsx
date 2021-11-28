@@ -1,5 +1,6 @@
 import { Row, Col, Badge } from 'reactstrap';
 import { PropsWithChildren } from 'react';
+import ReactMarkdown from 'react-markdown'
 import { DateTime } from 'luxon';
 import { Style } from '../common/Style';
 import Util from '../common/Util';
@@ -16,6 +17,8 @@ export const Introduce = {
     });
   },
 };
+
+
 
 function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   const latestUpdated = DateTime.fromFormat(
@@ -34,9 +37,12 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
         </Col>
         <Col sm={12} md={9}>
           {payload.contents.map((content, index) => (
-            <p key={index.toString()}>{content}</p>
+            // eslint-disable-next-line react/no-danger
+            <ReactMarkdown key={index.toString()}>
+              {content}
+            </ReactMarkdown>
           ))}
-          <p className="text-right">
+          <p className="text-end">
             <small>Latest Updated</small>{' '}
             <Badge color="secondary">
               {`${latestUpdated.toFormat(
@@ -44,8 +50,8 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
               )} (D+${latestUpdatedByNow})`}
             </Badge>
           </p>
-          <p className="text-right" style={Style.sign}>
-            {payload.sign}
+          <p className="text-end" style={Style.sign}>
+            {payload.sign} 
           </p>
         </Col>
       </Row>
