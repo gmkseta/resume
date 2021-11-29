@@ -1,5 +1,5 @@
+import React, { PropsWithChildren } from 'react';
 import { DateTime, Duration } from 'luxon';
-import { PropsWithChildren } from 'react';
 import { Badge, Col, Row } from 'reactstrap';
 import { EmptyRowCol } from '../common';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
@@ -11,15 +11,14 @@ import ExperienceRow from './row';
 type Payload = IExperience.Payload;
 
 export const Experience = {
-  Component: ({ payload }: PropsWithChildren<{ payload: Payload }>) => {
-    return PreProcessingComponent<Payload>({
+  Component: ({ payload }: PropsWithChildren<{ payload: Payload }>) =>
+    PreProcessingComponent<Payload>({
       payload,
       component: Component,
-    });
-  },
+    }),
 };
 
-function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
+const Component = function ({ payload }: PropsWithChildren<{ payload: Payload }>) {
   const totalPeriod = () => {
     if (payload.disableTotalPeriod) {
       return '';
@@ -46,23 +45,19 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
       </EmptyRowCol>
     </div>
   );
-}
+};
 
-function getFormattingExperienceTotalDuration(payload: IExperience.Payload) {
+const getFormattingExperienceTotalDuration = (payload: IExperience.Payload) => {
   const durations = payload.list
-    .map((item) => {
-      return {
-        endedAt: item.endedAt
-          ? DateTime.fromFormat(item.endedAt, Util.LUXON_DATE_FORMAT.YYYY_LL)
-          : DateTime.local(),
-        startedAt: DateTime.fromFormat(item.startedAt, Util.LUXON_DATE_FORMAT.YYYY_LL),
-      };
-    })
-    .map(({ endedAt, startedAt }) => {
-      return endedAt.plus({ month: 1 }).diff(startedAt);
-    });
+    .map((item) => ({
+      endedAt: item.endedAt
+        ? DateTime.fromFormat(item.endedAt, Util.LUXON_DATE_FORMAT.YYYY_LL)
+        : DateTime.local(),
+      startedAt: DateTime.fromFormat(item.startedAt, Util.LUXON_DATE_FORMAT.YYYY_LL),
+    }))
+    .map(({ endedAt, startedAt }) => endedAt.plus({ month: 1 }).diff(startedAt));
 
   const totalExperience = durations.reduce((prev, cur) => prev.plus(cur), Duration.fromMillis(0));
 
   return totalExperience.toFormat(`총 ${Util.LUXON_DATE_FORMAT.DURATION_KINDNESS}`);
-}
+};

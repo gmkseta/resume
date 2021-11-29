@@ -1,10 +1,10 @@
-import { PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Row, Col, Badge } from 'reactstrap';
 import { ISkill } from './ISkill';
 import { Style } from '../common/Style';
 import Util from '../common/Util';
 
-export default function SkillRow({
+const SkillRow = function ({
   skill,
   index,
 }: PropsWithChildren<{ skill: ISkill.Skill; index: number }>) {
@@ -22,9 +22,9 @@ export default function SkillRow({
       </Row>
     </div>
   );
-}
+};
 
-function createCalculatedSkillItems(items: ISkill.Item[]) {
+const createCalculatedSkillItems = (items: ISkill.Item[]) => {
   const log = Util.debug('SkillRow:createCalculatedSkillItems');
 
   /**
@@ -46,27 +46,23 @@ function createCalculatedSkillItems(items: ISkill.Item[]) {
 
   return (
     <Row className="mt-2 mt-md-0">
-      {list.map((skills, index) => {
-        return (
-          <Col md={4} xs={12} key={index.toString()}>
-            <ul>
-              {skills.map((skill, skillIndex) => {
-                return (
-                  <li key={skillIndex.toString()}>
-                    {createBadge(skill.level)}
-                    {skill.title}
-                  </li>
-                );
-              })}
-            </ul>
-          </Col>
-        );
-      })}
+      {list.map((skills, index) => (
+        <Col md={4} xs={12} key={index.toString()}>
+          <ul>
+            {skills.map((skill, skillIndex) => (
+              <li key={skillIndex.toString()}>
+                {createBadge(skill.level)}
+                {skill.title}
+              </li>
+            ))}
+          </ul>
+        </Col>
+      ))}
     </Row>
   );
-}
+};
 
-function createBadge(level?: ISkill.Item['level']) {
+const createBadge = (level?: ISkill.Item['level']) => {
   if (!level) {
     return '';
   }
@@ -74,14 +70,14 @@ function createBadge(level?: ISkill.Item['level']) {
   const options = (() => {
     switch (level) {
       case 3: {
-        return {color: 'primary'};
+        return { color: 'primary' };
       }
       case 2: {
-        return {color: 'secondary'};
+        return { color: 'secondary' };
       }
       case 1:
       default: {
-        return {color: 'light', className: 'text-dark'};
+        return { color: 'light', className: 'text-dark' };
       }
     }
   })();
@@ -93,4 +89,6 @@ function createBadge(level?: ISkill.Item['level']) {
       </Badge>{' '}
     </span>
   );
-}
+};
+
+export default SkillRow;

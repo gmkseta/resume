@@ -12,7 +12,7 @@ enum LUXON_DATE_FORMAT {
   DURATION_KINDNESS_ONLY_MONTH = 'M개월',
 }
 
-function getFormattingDuration(from: DateTime, to: DateTime = DateTime.local()) {
+const getFormattingDuration = (from: DateTime, to: DateTime = DateTime.local()) => {
   const log = debug('Util:getFormattingDuration');
 
   // 햇수 계산을 위해 month 에 1개월 추가
@@ -28,11 +28,9 @@ function getFormattingDuration(from: DateTime, to: DateTime = DateTime.local()) 
       : LUXON_DATE_FORMAT.DURATION_KINDNESS;
 
   return diff.toFormat(format);
-}
+};
 
-function debug(channel: string) {
-  return _debug(`yosume:${channel}`);
-}
+const debug = (channel: string) => _debug(`yosume:${channel}`);
 
 const Util = {
   LUXON_DATE_FORMAT,

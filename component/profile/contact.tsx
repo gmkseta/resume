@@ -1,12 +1,10 @@
+import React, { PropsWithChildren } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { PropsWithChildren } from 'react';
 import { Row, Col, Badge } from 'reactstrap';
 import { IProfile } from './IProfile';
 import { HrefTargetBlank } from '../common';
 
-export default function ProfileContact({
-  payload,
-}: PropsWithChildren<{ payload: IProfile.Contact }>) {
+const ProfileContact = function ({ payload }: PropsWithChildren<{ payload: IProfile.Contact }>) {
   return (
     <Row className="pb-2">
       <Col xs={1} className="text-end">
@@ -15,15 +13,21 @@ export default function ProfileContact({
       <Col xs="auto">{createLink(payload)}</Col>
     </Row>
   );
-}
+};
 
-function createLink(payload: IProfile.Contact) {
+const createLink = (payload: IProfile.Contact) => {
   if (payload.badge) {
-    return <Badge color="light" className='text-black'>{payload.title || payload.link}</Badge>;
+    return (
+      <Badge color="light" className="text-black">
+        {payload.title || payload.link}
+      </Badge>
+    );
   }
   return payload.link ? (
     <HrefTargetBlank url={payload.link} text={payload.title} />
   ) : (
     <span>{payload.title}</span>
   );
-}
+};
+
+export default ProfileContact;

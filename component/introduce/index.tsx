@@ -1,6 +1,6 @@
+import React, { PropsWithChildren } from 'react';
 import { Row, Col, Badge } from 'reactstrap';
-import { PropsWithChildren } from 'react';
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown';
 import { DateTime } from 'luxon';
 import { Style } from '../common/Style';
 import Util from '../common/Util';
@@ -10,17 +10,14 @@ import { PreProcessingComponent } from '../common/PreProcessingComponent';
 type Payload = IIntroduce.Payload;
 
 export const Introduce = {
-  Component: ({ payload }: PropsWithChildren<{ payload: Payload }>) => {
-    return PreProcessingComponent<Payload>({
+  Component: ({ payload }: PropsWithChildren<{ payload: Payload }>) =>
+    PreProcessingComponent<Payload>({
       payload,
       component: Component,
-    });
-  },
+    }),
 };
 
-
-
-function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
+const Component = function ({ payload }: PropsWithChildren<{ payload: Payload }>) {
   const latestUpdated = DateTime.fromFormat(
     payload.latestUpdated,
     Util.LUXON_DATE_FORMAT.YYYY_LL_DD,
@@ -38,9 +35,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
         <Col sm={12} md={9}>
           {payload.contents.map((content, index) => (
             // eslint-disable-next-line react/no-danger
-            <ReactMarkdown key={index.toString()}>
-              {content}
-            </ReactMarkdown>
+            <ReactMarkdown key={index.toString()}>{content}</ReactMarkdown>
           ))}
           <p className="text-end">
             <small>Latest Updated</small>{' '}
@@ -51,10 +46,10 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
             </Badge>
           </p>
           <p className="text-end" style={Style.sign}>
-            {payload.sign} 
+            {payload.sign}
           </p>
         </Col>
       </Row>
     </div>
   );
-}
+};

@@ -1,6 +1,6 @@
+import React, { PropsWithChildren } from 'react';
 import { Row, Col, Alert } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { PropsWithChildren } from 'react';
 import ProfileContact from './contact';
 import ProfileImage from './image';
 import { EmptyRowCol } from '../common';
@@ -11,15 +11,14 @@ import { PreProcessingComponent } from '../common/PreProcessingComponent';
 type Payload = IProfile.Payload;
 
 export const Profile = {
-  Component: ({ payload }: PropsWithChildren<{ payload: Payload }>) => {
-    return PreProcessingComponent<Payload>({
+  Component: ({ payload }: PropsWithChildren<{ payload: Payload }>) =>
+    PreProcessingComponent<Payload>({
       payload,
       component: Component,
-    });
-  },
+    }),
 };
 
-function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
+const Component = function ({ payload }: PropsWithChildren<{ payload: Payload }>) {
   const { image, contact, name, notice } = payload;
   return (
     <div className="mt-5">
@@ -35,33 +34,29 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
       </Row>
     </div>
   );
-}
+};
 
-function createNameArea(name: Payload['name']) {
-  return (
-    <Row>
-      <Col className="text-center text-md-start">
-        <h1 style={Style.blue}>
-          {name.title} <small>{name.small || ''}</small>
-        </h1>
-      </Col>
-    </Row>
-  );
-}
+const createNameArea = (name: Payload['name']) => (
+  <Row>
+    <Col className="text-center text-md-start">
+      <h1 style={Style.blue}>
+        {name.title} <small>{name.small || ''}</small>
+      </h1>
+    </Col>
+  </Row>
+);
 
-function createProfileContactMap(contacts: Payload['contact']) {
-  return (
-    <Row>
-      <Col className="pt-3">
-        {contacts.map((contact, index) => (
-          <ProfileContact key={index.toString()} payload={contact} />
-        ))}
-      </Col>
-    </Row>
-  );
-}
+const createProfileContactMap = (contacts: Payload['contact']) => (
+  <Row>
+    <Col className="pt-3">
+      {contacts.map((contact, index) => (
+        <ProfileContact key={index.toString()} payload={contact} />
+      ))}
+    </Col>
+  </Row>
+);
 
-function createNoticeArea(notice: Payload['notice']) {
+const createNoticeArea = (notice: Payload['notice']) => {
   if (notice)
     return (
       <EmptyRowCol>
@@ -71,4 +66,5 @@ function createNoticeArea(notice: Payload['notice']) {
         </Alert>
       </EmptyRowCol>
     );
-}
+  return null;
+};

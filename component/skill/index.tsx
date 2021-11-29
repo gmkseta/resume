@@ -1,5 +1,5 @@
+import React, { PropsWithChildren, useState } from 'react';
 import { Row, Col, Tooltip } from 'reactstrap';
-import { PropsWithChildren, useState } from 'react';
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Style } from '../common/Style';
@@ -11,15 +11,14 @@ import { PreProcessingComponent } from '../common/PreProcessingComponent';
 type Payload = ISkill.Payload;
 
 export const Skill = {
-  Component: ({ payload }: PropsWithChildren<{ payload: Payload }>) => {
-    return PreProcessingComponent<Payload>({
+  Component: ({ payload }: PropsWithChildren<{ payload: Payload }>) =>
+    PreProcessingComponent<Payload>({
       payload,
       component: Component,
-    });
-  },
+    }),
 };
 
-function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
+const Component = function ({ payload }: PropsWithChildren<{ payload: Payload }>) {
   return (
     <div className="mt-5">
       <EmptyRowCol>
@@ -37,9 +36,9 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
       </EmptyRowCol>
     </div>
   );
-}
+};
 
-function createTooltip(content?: string) {
+const createTooltip = (content?: string) => {
   if (!content) {
     return '';
   }
@@ -62,4 +61,4 @@ function createTooltip(content?: string) {
       </Tooltip>
     </small>
   );
-}
+};

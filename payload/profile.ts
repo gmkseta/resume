@@ -4,7 +4,6 @@ import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import { IProfile } from '../component/profile/IProfile';
 
-
 const profile: IProfile.Payload = {
   disable: false,
   image: '/assets/profile.png',

@@ -1,5 +1,5 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import { Container } from 'reactstrap';
+import React from 'react';
 
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
@@ -17,13 +17,13 @@ import { Style } from '../component/common/Style';
 import Payload from '../payload';
 import { Article } from '../component/article';
 
-function Yosume() {
+const Yosume = function () {
   return (
     <>
       <NextSeo {...Payload._global.seo} />
       <Head>
         <title>{Payload._global.headTitle}</title>
-        <link rel="shortcut icon" href="/assets/favicon.ico" />
+        <link rel="icon" href="/assets/favicon.ico" />
       </Head>
       <Container style={Style.global}>
         <Profile.Component payload={Payload.profile} />
@@ -40,6 +40,6 @@ function Yosume() {
       </Container>
     </>
   );
-}
+};
 
 export default Yosume;

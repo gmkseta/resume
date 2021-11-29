@@ -1,11 +1,11 @@
+import React, { PropsWithChildren } from 'react';
 import { DateTime } from 'luxon';
-import { PropsWithChildren } from 'react';
 import { Row, Col, Badge } from 'reactstrap';
 import { IExperience } from './IExperience';
 import { Style } from '../common/Style';
 import Util from '../common/Util';
 
-export default function ExperienceRow({
+const ExperienceRow = function ({
   item,
   index,
 }: PropsWithChildren<{ item: IExperience.Item; index: number }>) {
@@ -29,9 +29,9 @@ export default function ExperienceRow({
       </Row>
     </div>
   );
-}
+};
 
-function createSkillKeywords(skillKeywords?: string[]) {
+const createSkillKeywords = (skillKeywords?: string[]) => {
   if (!skillKeywords) {
     return '';
   }
@@ -52,13 +52,17 @@ function createSkillKeywords(skillKeywords?: string[]) {
       </div>
     </li>
   );
-}
+};
 
-function createWorkingPeriod(startedAtString: string, endedAtString?: string) {
+const createWorkingPeriod = (startedAtString: string, endedAtString?: string) => {
   const DATE_FORMAT = Util.LUXON_DATE_FORMAT;
   const startedAt = DateTime.fromFormat(startedAtString, DATE_FORMAT.YYYY_LL);
 
-  const { periodTitle, endedAt, isWorking } = (() => {
+  const {
+    periodTitle,
+    endedAt = undefined,
+    isWorking,
+  } = (() => {
     if (!endedAtString) {
       return {
         periodTitle: `${startedAt.toFormat(DATE_FORMAT.YYYY_DOT_LL)} ~`,
@@ -93,4 +97,6 @@ function createWorkingPeriod(startedAtString: string, endedAtString?: string) {
       </Col>
     </Row>
   );
-}
+};
+
+export default ExperienceRow;

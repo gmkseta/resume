@@ -1,5 +1,4 @@
 import { IIntroduce } from '../component/introduce/IIntroduce';
-import { lastestUpdatedAt } from '../package.json';
 
 const introduce: IIntroduce.Payload = {
   disable: false,
@@ -9,7 +8,7 @@ const introduce: IIntroduce.Payload = {
     '또한 스타트업 고객사들과 프로젝트를 진행하면서 개발 지식이 부족한 고객사와의 커뮤니케이션이 익숙해졌습니다.',
     '반복되는 작업, 질의를 줄이기 위해 **40여개**의 사내 도큐, **10여개**의 README, 위키 및 스크립트를 작성했습니다.',
     'MSA, 대규모 트래픽 처리, DevOps에 관심이 많고 경험하고 싶습니다.',
-    '최근에는 테스트코드와 클린코드에 대해 고민하고 있습니다.'
+    '최근에는 테스트코드와 클린코드에 대해 고민하고 있습니다.',
   ],
   sign: 'Seongjun Kim',
   // sign: packageJson.author.name,

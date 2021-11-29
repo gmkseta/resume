@@ -1,66 +1,56 @@
-import { PropsWithChildren, CSSProperties } from 'react';
+import React, { PropsWithChildren, CSSProperties } from 'react';
 import { IRow } from './IRow';
 import { HrefTargetBlank } from '.';
-import React from 'react';
 
 /** Description Recusion Generator */
-export function CommonDescription({
+export const CommonDescription = function ({
   descriptions,
   option,
 }: PropsWithChildren<{ descriptions: IRow.Description[]; option?: { padding?: boolean } }>) {
   return (
+    // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
       {descriptions ? (
         <ul className={option?.padding ? 'pt-2' : ''}>
-          {descriptions.map((description, descIndex) => {
-            return (
-              <React.Fragment key={descIndex}>
-                <Description description={description} key={'root'+descIndex} />
-                {description.descriptions ? (
-                  <DescriptionRecursion
-                    descriptions={description.descriptions}
-                    key={descIndex}
-                  />
-                ) : (
-                  ''
-                )}
-              </React.Fragment>
-            );
-          })}
+          {descriptions.map((description, descIndex) => (
+            <React.Fragment key={descIndex}>
+              <Description description={description} key={`root${descIndex}`} />
+              {description.descriptions ? (
+                <DescriptionRecursion descriptions={description.descriptions} key={descIndex} />
+              ) : (
+                ''
+              )}
+            </React.Fragment>
+          ))}
         </ul>
       ) : (
         ''
       )}
     </>
   );
-}
+};
 
 // ul 태그 depth 표현을 위한 재귀
-function DescriptionRecursion({
+const DescriptionRecursion = function ({
   descriptions,
 }: PropsWithChildren<{ descriptions: IRow.Description[] }>) {
   return (
     <ul>
-      {descriptions.map((description, index) => {
-        return (
-          <React.Fragment key={index}>
-            <Description description={description} key={index} />
-            {description.descriptions ? (
-              <DescriptionRecursion
-                descriptions={description.descriptions}
-                key={index}
-              />
-            ) : (
-              ''
-            )}
-          </React.Fragment>
-        );
-      })}
+      {descriptions.map((description, index) => (
+        <React.Fragment key={index}>
+          <Description description={description} key={index} />
+          {description.descriptions ? (
+            <DescriptionRecursion descriptions={description.descriptions} key={index} />
+          ) : (
+            ''
+          )}
+        </React.Fragment>
+      ))}
     </ul>
   );
-}
+};
 
-function Description({ description }: PropsWithChildren<{ description: IRow.Description }>) {
+const Description = ({ description }: PropsWithChildren<{ description: IRow.Description }>) => {
   const { content, href, postImage, postHref, weight } = description;
 
   const component = (() => {
@@ -104,9 +94,9 @@ function Description({ description }: PropsWithChildren<{ description: IRow.Desc
   })();
 
   return component;
-}
+};
 
-function getFontWeight(weight?: IRow.Description['weight']): CSSProperties {
+const getFontWeight = (weight?: IRow.Description['weight']): CSSProperties => {
   if (!weight) {
     // style 에 fontWeight 범벅 되는것을 방지
     return {};
@@ -114,7 +104,7 @@ function getFontWeight(weight?: IRow.Description['weight']): CSSProperties {
   return {
     fontWeight: fontWeight[weight || 'DEFAULT'],
   };
-}
+};
 
 // Noto Sans KR Weights: 300, 400, 500, 700
 const fontWeight: Record<IRow.FontWeightType, number> = {
