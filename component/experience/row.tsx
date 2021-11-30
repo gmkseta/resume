@@ -1,10 +1,10 @@
-import React, { PropsWithChildren, PureComponent } from 'react';
 import { DateTime } from 'luxon';
-import { Row, Col, Badge } from 'reactstrap';
+import React, { PropsWithChildren } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { IExperience } from './IExperience';
+import { Badge, Col, Row } from 'reactstrap';
 import { Style } from '../common/Style';
 import Util from '../common/Util';
+import { IExperience } from './IExperience';
 
 const MdLi: React.FC<{ children: string }> = function ({ children }) {
   return <ReactMarkdown components={{ p: 'li' }}>{children}</ReactMarkdown>;

@@ -1,12 +1,11 @@
-import React, { PropsWithChildren, useState } from 'react';
-import { Row, Col, Tooltip } from 'reactstrap';
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Style } from '../common/Style';
-import { ISkill } from './ISkill';
-import SkillRow from './row';
+import React, { PropsWithChildren, useState } from 'react';
+import { Col, Row, Tooltip } from 'reactstrap';
 import { EmptyRowCol } from '../common';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
+import { ISkill } from './ISkill';
+import SkillRow from './row';
 
 type Payload = ISkill.Payload;
 

@@ -1,12 +1,11 @@
-import React, { PropsWithChildren } from 'react';
-import { Row, Col, Alert } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { PropsWithChildren } from 'react';
+import { Alert, Col, Row } from 'reactstrap';
+import { EmptyRowCol } from '../common';
+import { PreProcessingComponent } from '../common/PreProcessingComponent';
 import ProfileContact from './contact';
 import ProfileImage from './image';
-import { EmptyRowCol } from '../common';
 import { IProfile } from './IProfile';
-import { Style } from '../common/Style';
-import { PreProcessingComponent } from '../common/PreProcessingComponent';
 
 type Payload = IProfile.Payload;
 

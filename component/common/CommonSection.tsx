@@ -1,7 +1,6 @@
 import React, { PropsWithChildren } from 'react';
-import { Row, Col } from 'reactstrap';
+import { Col, Row } from 'reactstrap';
 import { EmptyRowCol } from '.';
-import { Style } from './Style';
 
 export const CommonSection = function ({ title, children }: PropsWithChildren<{ title: string }>) {
   return (
