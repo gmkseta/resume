@@ -76,7 +76,7 @@ const project: IProject.Payload = {
             '데이터베이스의 특정 컬럼이 너무 비대해져서 s3로 옮기는 방식을 제안했고 실행했습니다.',
         },
         { content: '상품 판매 웹사이트를 구현했습니다. 결제 및 배송 관련 서비스를 구현했습니다.' },
-        { content: '프론트엔드 및 백엔드 모두 작업하였습니다.' },
+        { content: '풀스텍으로 작업하였습니다.' },
       ],
     },
     {
@@ -97,9 +97,22 @@ const project: IProject.Payload = {
       ],
     },
     {
+      title: '뉴젠',
+      startedAt: '2019-12',
+      endedAt: '2020-08',
+      where: '(주) 인썸니아',
+      subTitle: '메인',
+      descriptions: [
+        { content: '교회 전용 주일학교 학생관리 앱입니다. 웹앱, 어드민페이지를 개발했습니다.' },
+        {
+          content: '출석 및 통계 기능 풀스텍으로 개발했습니다.',
+        },
+      ],
+    },
+    {
       title: 'S프로젝트 - 사내 테스크관리도구',
-      startedAt: '2021-03',
-      endedAt: '2021-03',
+      startedAt: '2020-03',
+      endedAt: '2020-03',
       where: '(주) 인썸니아 - 고객사명은 제외했습니다.',
       subTitle: '백업',
       descriptions: [
