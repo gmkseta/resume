@@ -1,10 +1,14 @@
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, PureComponent } from 'react';
 import { DateTime } from 'luxon';
 import { Row, Col, Badge } from 'reactstrap';
+import ReactMarkdown from 'react-markdown';
 import { IExperience } from './IExperience';
 import { Style } from '../common/Style';
 import Util from '../common/Util';
 
+const MdLi: React.FC<{ children: string }> = function ({ children }) {
+  return <ReactMarkdown components={{ p: 'li' }}>{children}</ReactMarkdown>;
+};
 const ExperienceRow = function ({
   item,
   index,
@@ -18,11 +22,24 @@ const ExperienceRow = function ({
         </Col>
         <Col sm={12} md={9}>
           <h4>{item.title}</h4>
+          {item.subtitle ? <div style={Style.gray}>{item.subtitle}</div> : ''}
+
           <i style={Style.gray}>{item.position}</i>
           <ul className="pt-3">
-            {item.descriptions.map((description, descIndex) => (
-              <li key={descIndex.toString()}>{description}</li>
-            ))}
+            {item.descriptions?.map((description, descIndex) =>
+              typeof description === 'string' ? (
+                <MdLi key={descIndex.toString()}>{description}</MdLi>
+              ) : (
+                <li key={descIndex.toString()}>
+                  {description.title}
+                  <ul>
+                    {description.descriptions?.map((subDescription, subDescIndex) => (
+                      <MdLi key={`${descIndex}-${subDescIndex}`}>{subDescription}</MdLi>
+                    ))}
+                  </ul>
+                </li>
+              ),
+            )}
             {createSkillKeywords(item.skillKeywords)}
           </ul>
         </Col>

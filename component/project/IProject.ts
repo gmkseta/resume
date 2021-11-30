@@ -20,6 +20,7 @@ export declare namespace IProject {
 
     /** ### 어디서 수행했는지 (or subtitle) */
     where: string;
+    subTitle?: string;
 
     /**
      * ### 프로젝트 시작일

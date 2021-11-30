@@ -14,7 +14,7 @@ export const HrefTargetBlank = function ({
   text,
 }: PropsWithChildren<{ url: string; text?: string }>) {
   return (
-    <a href={url} target="_blank" rel="noreferrer noopener">
+    <a href={url} target="_blank" rel="noreferrer noopener" className="text-secondary">
       {text || url}
     </a>
   );

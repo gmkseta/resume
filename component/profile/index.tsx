@@ -39,7 +39,7 @@ const Component = function ({ payload }: PropsWithChildren<{ payload: Payload }>
 const createNameArea = (name: Payload['name']) => (
   <Row>
     <Col className="text-center text-md-start">
-      <h1 style={Style.blue}>
+      <h1 className="text-primary">
         {name.title} <small>{name.small || ''}</small>
       </h1>
     </Col>

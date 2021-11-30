@@ -18,6 +18,8 @@ export declare namespace IExperience {
   export interface Item {
     /** ### (직장)경험 명 */
     title: string;
+    subtitle?: string;
+    type: 'full-time' | 'part-time' | 'internship' | 'volunteer';
 
     /** ### (직장)역할 명 (or Subtitle) */
     position: string;
@@ -46,7 +48,7 @@ export declare namespace IExperience {
      * @todo `IRow.Description[]` 으로 변경
      */
 
-    descriptions: string[];
+    descriptions?: (string | { title: string; descriptions: string[] })[];
     /**
      * ### (직장)경험의 키워드
      *

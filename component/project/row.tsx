@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 import { DateTime } from 'luxon';
+import { Badge } from 'reactstrap';
 import { IProject } from './IProject';
 import { CommonRows } from '../common/CommonRow';
 import { IRow } from '../common/IRow';
@@ -31,9 +32,16 @@ const serialize = (payload: IProject.Item): IRow.Payload => {
     return `${startedAt} ~`;
   })();
 
+  const subTitle = (
+    <Badge color="secondary" className="me-1">
+      {payload.subTitle}
+    </Badge>
+  );
+
   return {
     left: {
       title,
+      subTitle,
     },
     right: {
       title: payload.title,

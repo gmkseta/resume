@@ -3,7 +3,6 @@ import { DateTime, Duration } from 'luxon';
 import { Badge, Col, Row } from 'reactstrap';
 import { EmptyRowCol } from '../common';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
-import { Style } from '../common/Style';
 import Util from '../common/Util';
 import { IExperience } from './IExperience';
 import ExperienceRow from './row';
@@ -36,7 +35,7 @@ const Component = function ({ payload }: PropsWithChildren<{ payload: Payload }>
       <EmptyRowCol>
         <Row className="pb-3">
           <Col>
-            <h2 style={Style.blue}>EXPERIENCE {totalPeriod()}</h2>
+            <h2 className="text-primary">EXPERIENCE {totalPeriod()}</h2>
           </Col>
         </Row>
         {payload.list.map((item, index) => (
@@ -49,6 +48,7 @@ const Component = function ({ payload }: PropsWithChildren<{ payload: Payload }>
 
 const getFormattingExperienceTotalDuration = (payload: IExperience.Payload) => {
   const durations = payload.list
+    .filter((item) => item.type === 'full-time')
     .map((item) => ({
       endedAt: item.endedAt
         ? DateTime.fromFormat(item.endedAt, Util.LUXON_DATE_FORMAT.YYYY_LL)
@@ -56,8 +56,6 @@ const getFormattingExperienceTotalDuration = (payload: IExperience.Payload) => {
       startedAt: DateTime.fromFormat(item.startedAt, Util.LUXON_DATE_FORMAT.YYYY_LL),
     }))
     .map(({ endedAt, startedAt }) => endedAt.plus({ month: 1 }).diff(startedAt));
-
   const totalExperience = durations.reduce((prev, cur) => prev.plus(cur), Duration.fromMillis(0));
-
   return totalExperience.toFormat(`총 ${Util.LUXON_DATE_FORMAT.DURATION_KINDNESS}`);
 };

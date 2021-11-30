@@ -4,49 +4,23 @@ const backend: ISkill.Skill = {
   category: 'Back-end',
   items: [
     {
+      title: 'Ruby On Rails',
+      level: 3,
+    },
+    {
       title: 'Node.js',
-      level: 3,
-    },
-    {
-      title: 'AWS',
-      level: 3,
-    },
-    {
-      title: 'PHP',
       level: 2,
-    },
-    {
-      title: 'Java',
-      level: 1,
     },
     {
       title: 'Python',
-      level: 1,
-    },
-    {
-      title: 'C/C++',
-      level: 1,
-    },
-  ],
-};
-
-const database: ISkill.Skill = {
-  category: 'Database',
-  items: [
-    {
-      title: 'MySQL',
-      level: 3,
-    },
-    {
-      title: 'Oracle',
       level: 2,
     },
     {
-      title: 'Redis',
+      title: 'Ruby',
       level: 2,
     },
     {
-      title: 'MongoDB',
+      title: 'TypeScript',
       level: 1,
     },
   ],
@@ -74,34 +48,32 @@ const frontend: ISkill.Skill = {
   ],
 };
 
-const etc: ISkill.Skill = {
-  category: 'Etc',
+const devops: ISkill.Skill = {
+  category: 'DevOps',
   items: [
     {
-      title: 'Ubuntu',
+      title: 'AWS CDK',
+      level: 2,
     },
     {
-      title: 'Vim',
+      title: 'Docker',
+      level: 1,
     },
     {
-      title: 'Security',
+      title: 'Ansible',
+      level: 1,
     },
     {
-      title: 'VS Code',
-    },
-    {
-      title: 'Jira',
-    },
-    {
-      title: 'Confluence',
+      title: 'Terraform',
+      level: 1,
     },
   ],
 };
 
 const skill: ISkill.Payload = {
   disable: false,
-  skills: [backend, database, frontend, etc],
-  tooltip: '1: 기초 수준\n2: 취미 개발 수준\n3: Production 개발 가능 수준',
+  skills: [backend, frontend, devops],
+  tooltip: '1: 기초 수준\n2: 취미 개발 수준\n3: Production 개발 가능 수준\n4: 깊게 알고 있는 수준',
 };
 
 export default skill;
