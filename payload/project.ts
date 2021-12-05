@@ -7,10 +7,13 @@ const project: IProject.Payload = {
       title: 'IaC 전환 CI/CD 파이프라인 구축',
       startedAt: '2021-01',
       where: '(주) 인썸니아',
-      subTitle: '메인',
+      subTitle: {
+        role: '메인',
+        skills: ['TypeScript', 'Aws Cdk'],
+      },
       descriptions: [
         {
-          content: '기존 모놀리식 서비스에서 몇가지 서비스를 분리',
+          content: '기존 모놀리식 서비스에서 몇 가지 서비스를 분리',
           weight: 'MEDIUM',
           descriptions: [
             {
@@ -37,7 +40,10 @@ const project: IProject.Payload = {
       title: '히든피터',
       startedAt: '2021-08',
       endedAt: '2021-09',
-      subTitle: '백업',
+      subTitle: {
+        role: '백업',
+        skills: ['RubyOnRails', 'Nextjs'],
+      },
       where: '(주) 인썸니아',
       descriptions: [
         {
@@ -65,11 +71,14 @@ const project: IProject.Payload = {
       startedAt: '2019-01',
       endedAt: '2020-11',
       where: '(주) 인썸니아',
-      subTitle: '메인',
+      subTitle: {
+        role: '메인',
+        skills: ['RubyOnRails'],
+      },
       descriptions: [
         { content: '축구 경기 분석 웨어러블 솔루션 앱입니다. 웹앱, 어드민페이지를 개발했습니다.' },
         {
-          content: '경기 분석관련 주요 로직에서 테스트 코드 작성하고 리펙토링 한 경험이 있습니다.',
+          content: '경기 분석 관련 주요 로직에서 테스트 코드 작성하고 리펙토링 한 경험이 있습니다.',
         },
         {
           content:
@@ -84,7 +93,10 @@ const project: IProject.Payload = {
       startedAt: '2019-02',
       endedAt: '2020-10',
       where: '(주) 인썸니아',
-      subTitle: '메인',
+      subTitle: {
+        role: '메인',
+        skills: ['RubyOnRails'],
+      },
       descriptions: [
         { content: '도시락 정기배송 관련 앱입니다. 웹앱, 어드민페이지를 개발했습니다.' },
         {
@@ -101,9 +113,12 @@ const project: IProject.Payload = {
       startedAt: '2019-12',
       endedAt: '2020-08',
       where: '(주) 인썸니아',
-      subTitle: '메인',
+      subTitle: {
+        role: '메인',
+        skills: ['RubyOnRails'],
+      },
       descriptions: [
-        { content: '교회 전용 주일학교 학생관리 앱입니다. 웹앱, 어드민페이지를 개발했습니다.' },
+        { content: '교회 전용 주일학교 학생 관리 앱입니다. 웹앱, 어드민페이지를 개발했습니다.' },
         {
           content: '출석 및 통계 기능 풀스텍으로 개발했습니다.',
         },
@@ -114,11 +129,14 @@ const project: IProject.Payload = {
       startedAt: '2020-03',
       endedAt: '2020-03',
       where: '(주) 인썸니아 - 고객사명은 제외했습니다.',
-      subTitle: '백업',
+      subTitle: {
+        role: '백업',
+        skills: ['RubyOnRails'],
+      },
       descriptions: [
         {
           content:
-            '사내 테스크관리 도구 웹사이트 외주입니다. 기존 개발자 분께서 백업 요청하셔서 리펙토링에 참여했습니다.',
+            '사내 테스크관리 도구 웹사이트 외주입니다. 메인 개발자분께서 백업 요청하셔서 리펙토링에 참여했습니다.',
         },
         {
           content:

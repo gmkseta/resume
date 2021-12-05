@@ -20,7 +20,7 @@ export declare namespace IProject {
 
     /** ### 어디서 수행했는지 (or subtitle) */
     where: string;
-    subTitle?: string;
+    subTitle?: Subtitle;
 
     /**
      * ### 프로젝트 시작일
@@ -43,5 +43,11 @@ export declare namespace IProject {
      * ### 프로젝트 설명
      */
     descriptions: IRow.Description[];
+  }
+
+  export interface Subtitle {
+    role?: string;
+    skills?: string[];
+    platforms?: string[];
   }
 }
