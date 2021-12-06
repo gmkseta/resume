@@ -42,7 +42,7 @@ const project: IProject.Payload = {
       endedAt: '2021-09',
       subTitle: {
         role: '백업',
-        skills: ['RubyOnRails', 'Nextjs'],
+        skills: ['RoR', 'Nextjs'],
       },
       where: '(주) 인썸니아',
       descriptions: [
@@ -73,7 +73,7 @@ const project: IProject.Payload = {
       where: '(주) 인썸니아',
       subTitle: {
         role: '메인',
-        skills: ['RubyOnRails'],
+        skills: ['RoR'],
       },
       descriptions: [
         { content: '축구 경기 분석 웨어러블 솔루션 앱입니다. 웹앱, 어드민페이지를 개발했습니다.' },
@@ -95,7 +95,7 @@ const project: IProject.Payload = {
       where: '(주) 인썸니아',
       subTitle: {
         role: '메인',
-        skills: ['RubyOnRails'],
+        skills: ['RoR'],
       },
       descriptions: [
         { content: '도시락 정기배송 관련 앱입니다. 웹앱, 어드민페이지를 개발했습니다.' },
@@ -115,7 +115,7 @@ const project: IProject.Payload = {
       where: '(주) 인썸니아',
       subTitle: {
         role: '메인',
-        skills: ['RubyOnRails'],
+        skills: ['RoR'],
       },
       descriptions: [
         { content: '교회 전용 주일학교 학생 관리 앱입니다. 웹앱, 어드민페이지를 개발했습니다.' },
@@ -131,7 +131,7 @@ const project: IProject.Payload = {
       where: '(주) 인썸니아 - 고객사명은 제외했습니다.',
       subTitle: {
         role: '백업',
-        skills: ['RubyOnRails'],
+        skills: ['RoR'],
       },
       descriptions: [
         {

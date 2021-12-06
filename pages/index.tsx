@@ -1,8 +1,9 @@
-import { Container } from 'reactstrap';
-import React from 'react';
-
-import Head from 'next/head';
 import { NextSeo } from 'next-seo';
+import Head from 'next/head';
+import React from 'react';
+import { Container } from 'reactstrap';
+import { Article } from '../component/article';
+import { Style } from '../component/common/Style';
 import { Education } from '../component/education';
 import { Etc } from '../component/etc';
 import { Experience } from '../component/experience';
@@ -13,9 +14,7 @@ import { Presentation } from '../component/presentation';
 import { Profile } from '../component/profile';
 import { Project } from '../component/project';
 import { Skill } from '../component/skill';
-import { Style } from '../component/common/Style';
 import Payload from '../payload';
-import { Article } from '../component/article';
 
 const Yosume = function () {
   return (
