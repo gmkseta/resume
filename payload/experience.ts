@@ -8,7 +8,7 @@ const experience: IExperience.Payload = {
       type: 'full-time',
       title: '(주) 인썸니아',
       subtitle:
-        '스타트업 전문 외주 개발사입니다. 저는 20년 이후 고객사 프로젝트 개발은 백업만 하고 사내 프로젝트 개발만 진행했습니다.',
+        '스타트업 전문 외주 개발사입니다. 저는 21년도에 고객사 프로젝트 개발은 백업만 하고 사내 프로젝트 개발만 진행했습니다.',
       position: 'Full Stack Developer',
       startedAt: '2019-11',
       descriptions: [
