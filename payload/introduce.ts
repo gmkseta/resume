@@ -13,7 +13,7 @@ const introduce: IIntroduce.Payload = {
   ],
   sign: 'Seongjun Kim',
   // sign: packageJson.author.name,
-  latestUpdated: '2021-11-28',
+  latestUpdated: '2021-12-07',
   // latestUpdated: lastestUpdatedAt,
 };
 

@@ -1,12 +1,12 @@
-import React, { PropsWithChildren } from 'react';
 import { DateTime } from 'luxon';
-import { CommonSection } from '../common/CommonSection';
+import React, { PropsWithChildren } from 'react';
 import { EmptyRowCol } from '../common';
 import { CommonRows } from '../common/CommonRow';
+import { CommonSection } from '../common/CommonSection';
 import { IRow } from '../common/IRow';
-import Util from '../common/Util';
-import { IEtc } from './IEtc';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
+import { LUXON_DATE_FORMAT } from '../common/Utils';
+import { IEtc } from './IEtc';
 
 type Payload = IEtc.Payload;
 type Item = IEtc.Item;
@@ -38,7 +38,7 @@ const EducationRow = function ({ payload }: PropsWithChildren<{ payload: Payload
 };
 
 const serialize = (item: Item): IRow.Payload => {
-  const DATE_FORMAT = Util.LUXON_DATE_FORMAT;
+  const DATE_FORMAT = LUXON_DATE_FORMAT;
   const startedAt = DateTime.fromFormat(item.startedAt, DATE_FORMAT.YYYY_LL).toFormat(
     DATE_FORMAT.YYYY_DOT_LL,
   );

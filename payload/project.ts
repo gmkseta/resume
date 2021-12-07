@@ -71,6 +71,7 @@ const project: IProject.Payload = {
       startedAt: '2019-01',
       endedAt: '2020-11',
       where: '(주) 인썸니아',
+      link: 'https://gmkseta.notion.site/18f1dbc23a0543d09686ee84427555f3',
       subTitle: {
         role: '메인',
         skills: ['RoR'],
@@ -93,6 +94,7 @@ const project: IProject.Payload = {
       startedAt: '2019-02',
       endedAt: '2020-10',
       where: '(주) 인썸니아',
+      link: 'https://gmkseta.notion.site/0274857a2bf1456e836b79fb704184dc',
       subTitle: {
         role: '메인',
         skills: ['RoR'],
@@ -100,11 +102,10 @@ const project: IProject.Payload = {
       descriptions: [
         { content: '도시락 정기배송 관련 앱입니다. 웹앱, 어드민페이지를 개발했습니다.' },
         {
-          content: '정기배송 신청 및 정기 결제를 구현하였습니다.',
+          content: '주문 및 당일 결제, 정기 결제 등을 구현했습니다.',
         },
         {
-          content:
-            '도시락 판매 관리인 전용 어드민페이지를 구현하였습니다. 배송 및 정산 관련 기능을 구현했습니다.',
+          content: '백오피스에서 권한처리 및 복잡한 정산 과정을 구현하고 리펙토링했습니다',
         },
       ],
     },

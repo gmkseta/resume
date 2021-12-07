@@ -17,6 +17,7 @@ export declare namespace IProject {
   export interface Item {
     /** ### 프로젝트 제목 */
     title: string;
+    link?: string;
 
     /** ### 어디서 수행했는지 (or subtitle) */
     where: string;

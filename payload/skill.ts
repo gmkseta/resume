@@ -45,6 +45,14 @@ const frontend: ISkill.Skill = {
       title: 'HTML/CSS',
       level: 2,
     },
+    {
+      title: 'ios',
+      level: 1,
+    },
+    {
+      title: 'android',
+      level: 1,
+    },
   ],
 };
 

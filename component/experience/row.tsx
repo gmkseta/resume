@@ -3,7 +3,7 @@ import React, { PropsWithChildren } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Badge, Col, Row } from 'reactstrap';
 import { Style } from '../common/Style';
-import Util from '../common/Util';
+import { getFormattingDuration, getSkillColor, LUXON_DATE_FORMAT } from '../common/Utils';
 import { IExperience } from './IExperience';
 
 const MdLi: React.FC<{ children: string }> = function ({ children }) {
@@ -58,10 +58,12 @@ const createSkillKeywords = (skillKeywords?: string[]) => {
       <div>
         {skillKeywords.map((keyword, index) => (
           <Badge
-            style={Style.skillKeywordBadge}
             key={index.toString()}
-            color="secondary"
             className="me-1"
+            color="none"
+            style={{
+              backgroundColor: getSkillColor(keyword),
+            }}
           >
             {keyword}
           </Badge>
@@ -72,7 +74,7 @@ const createSkillKeywords = (skillKeywords?: string[]) => {
 };
 
 const createWorkingPeriod = (startedAtString: string, endedAtString?: string) => {
-  const DATE_FORMAT = Util.LUXON_DATE_FORMAT;
+  const DATE_FORMAT = LUXON_DATE_FORMAT;
   const startedAt = DateTime.fromFormat(startedAtString, DATE_FORMAT.YYYY_LL);
 
   const {
@@ -110,7 +112,7 @@ const createWorkingPeriod = (startedAtString: string, endedAtString?: string) =>
         ) : (
           ''
         )}
-        <Badge color="info">{Util.getFormattingDuration(startedAt, endedAt)}</Badge>
+        <Badge color="info">{getFormattingDuration(startedAt, endedAt)}</Badge>
       </Col>
     </Row>
   );

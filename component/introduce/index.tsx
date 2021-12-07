@@ -1,11 +1,11 @@
-import React, { PropsWithChildren } from 'react';
-import { Row, Col, Badge } from 'reactstrap';
-import ReactMarkdown from 'react-markdown';
 import { DateTime } from 'luxon';
-import { Style } from '../common/Style';
-import Util from '../common/Util';
-import { IIntroduce } from './IIntroduce';
+import React, { PropsWithChildren } from 'react';
+import ReactMarkdown from 'react-markdown';
+import { Badge, Col, Row } from 'reactstrap';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
+import { Style } from '../common/Style';
+import { LUXON_DATE_FORMAT } from '../common/Utils';
+import { IIntroduce } from './IIntroduce';
 
 type Payload = IIntroduce.Payload;
 
@@ -18,10 +18,7 @@ export const Introduce = {
 };
 
 const Component = function ({ payload }: PropsWithChildren<{ payload: Payload }>) {
-  const latestUpdated = DateTime.fromFormat(
-    payload.latestUpdated,
-    Util.LUXON_DATE_FORMAT.YYYY_LL_DD,
-  );
+  const latestUpdated = DateTime.fromFormat(payload.latestUpdated, LUXON_DATE_FORMAT.YYYY_LL_DD);
   const latestUpdatedByNow = Math.floor(
     DateTime.local().diff(latestUpdated).milliseconds / 1000 / 60 / 60 / 24,
   );
@@ -41,7 +38,7 @@ const Component = function ({ payload }: PropsWithChildren<{ payload: Payload }>
             <small>Latest Updated</small>{' '}
             <Badge color="secondary">
               {`${latestUpdated.toFormat(
-                Util.LUXON_DATE_FORMAT.YYYY_DOT_LL_DOT_DD,
+                LUXON_DATE_FORMAT.YYYY_DOT_LL_DOT_DD,
               )} (D+${latestUpdatedByNow})`}
             </Badge>
           </p>

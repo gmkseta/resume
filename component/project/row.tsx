@@ -3,7 +3,7 @@ import React, { PropsWithChildren } from 'react';
 import { EmptyRowCol } from '../common';
 import { CommonRows } from '../common/CommonRow';
 import { IRow } from '../common/IRow';
-import Util from '../common/Util';
+import { LUXON_DATE_FORMAT } from '../common/Utils';
 import { IProject } from './IProject';
 import ProjectSubtitle from './projectSubtitle';
 
@@ -18,7 +18,7 @@ const ProjectRow = function ({ payload }: PropsWithChildren<{ payload: IProject.
 };
 
 const serialize = (payload: IProject.Item): IRow.Payload => {
-  const DATE_FORMAT = Util.LUXON_DATE_FORMAT;
+  const DATE_FORMAT = LUXON_DATE_FORMAT;
   const startedAt = DateTime.fromFormat(payload.startedAt, DATE_FORMAT.YYYY_LL).toFormat(
     DATE_FORMAT.YYYY_DOT_LL,
   );
@@ -43,6 +43,7 @@ const serialize = (payload: IProject.Item): IRow.Payload => {
       title: payload.title,
       subTitle: payload.where,
       descriptions: payload.descriptions,
+      link: payload.link,
     },
   };
 };

@@ -1,9 +1,9 @@
-import React, { PropsWithChildren } from 'react';
 import { DateTime, Duration } from 'luxon';
+import React, { PropsWithChildren } from 'react';
 import { Badge, Col, Row } from 'reactstrap';
 import { EmptyRowCol } from '../common';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
-import Util from '../common/Util';
+import { LUXON_DATE_FORMAT } from '../common/Utils';
 import { IExperience } from './IExperience';
 import ExperienceRow from './row';
 
@@ -51,11 +51,11 @@ const getFormattingExperienceTotalDuration = (payload: IExperience.Payload) => {
     .filter((item) => item.type === 'full-time')
     .map((item) => ({
       endedAt: item.endedAt
-        ? DateTime.fromFormat(item.endedAt, Util.LUXON_DATE_FORMAT.YYYY_LL)
+        ? DateTime.fromFormat(item.endedAt, LUXON_DATE_FORMAT.YYYY_LL)
         : DateTime.local(),
-      startedAt: DateTime.fromFormat(item.startedAt, Util.LUXON_DATE_FORMAT.YYYY_LL),
+      startedAt: DateTime.fromFormat(item.startedAt, LUXON_DATE_FORMAT.YYYY_LL),
     }))
     .map(({ endedAt, startedAt }) => endedAt.plus({ month: 1 }).diff(startedAt));
   const totalExperience = durations.reduce((prev, cur) => prev.plus(cur), Duration.fromMillis(0));
-  return totalExperience.toFormat(`총 ${Util.LUXON_DATE_FORMAT.DURATION_KINDNESS}`);
+  return totalExperience.toFormat(`총 ${LUXON_DATE_FORMAT.DURATION_KINDNESS}`);
 };

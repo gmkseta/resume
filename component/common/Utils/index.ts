@@ -13,7 +13,7 @@ enum LUXON_DATE_FORMAT {
 }
 
 const getFormattingDuration = (from: DateTime, to: DateTime = DateTime.local()) => {
-  const log = debug('Util:getFormattingDuration');
+  const log = customDebug('Util:getFormattingDuration');
 
   // 햇수 계산을 위해 month 에 1개월 추가
   const diff = to.plus({ month: 1 }).diff(from);
@@ -30,12 +30,7 @@ const getFormattingDuration = (from: DateTime, to: DateTime = DateTime.local()) 
   return diff.toFormat(format);
 };
 
-const debug = (channel: string) => _debug(`yosume:${channel}`);
+const customDebug = (channel: string) => _debug(`yosume:${channel}`);
 
-const Util = {
-  LUXON_DATE_FORMAT,
-  getFormattingDuration,
-  debug,
-};
-
-export default Util;
+export { LUXON_DATE_FORMAT, getFormattingDuration, customDebug };
+export * from './getSkillColor';

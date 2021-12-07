@@ -4,7 +4,7 @@ import { IArticle } from './IArticle';
 import { EmptyRowCol } from '../common';
 import { CommonSection } from '../common/CommonSection';
 import { CommonDescription } from '../common/CommonDescription';
-import Util from '../common/Util';
+import { customDebug } from '../common/Utils';
 
 type Payload = IArticle.Payload;
 
@@ -25,7 +25,7 @@ const Component = function ({ payload }: PropsWithChildren<{ payload: Payload }>
 };
 
 const ArticleRow = function ({ payload }: PropsWithChildren<{ payload: Payload }>) {
-  const log = Util.debug('ArticleRow');
+  const log = customDebug('ArticleRow');
 
   log(payload);
 
