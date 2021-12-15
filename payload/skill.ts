@@ -4,7 +4,7 @@ const backend: ISkill.Skill = {
   category: 'Back-end',
   items: [
     {
-      title: 'Ruby On Rails',
+      title: 'RoR',
       level: 3,
     },
     {

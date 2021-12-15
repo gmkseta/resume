@@ -27,7 +27,7 @@ const Component = function ({ payload }: PropsWithChildren<{ payload: Payload }>
     <div className="mt-5">
       <Row>
         <Col sm={12} md={3}>
-          <h2 className="text-primary">INTRODUCE</h2>
+          <h3 className="text-primary">INTRODUCE</h3>
         </Col>
         <Col sm={12} md={9}>
           {payload.contents.map((content, index) => (
