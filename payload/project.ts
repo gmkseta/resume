@@ -4,6 +4,34 @@ const project: IProject.Payload = {
   disable: false,
   list: [
     {
+      title: '새로운 기술 스택( React & API )에 대한 보일러플레이트 구성',
+      startedAt: '2021-01',
+      where: '(주) 인썸니아',
+      subTitle: {
+        role: '메인',
+        skills: ['TypeScript', 'React', 'RoR'],
+      },
+      descriptions: [
+        {
+          content: '기존에 **Rails 풀스택만** 사용하던 스택을 21년도에 변경하게 되었습니다',
+        },
+        {
+          content: '프론트는 **React** 백엔드 API 서버를 **Rails, Nest, Django**로 확장하였습니다.',
+        },
+        {
+          content:
+            '사원 분들 모두 **React** 경험이 없어서 먼저 스터디를 하고 Best Practice를 찾고 전파하려고 노력했습니다.',
+        },
+        {
+          content:
+            '프론트엔드는 리엑트 하나만 사용하고, 고객의 요청에 따라 백엔드 스택을 선택하여 사용하는 요구조건이 있었습니다.',
+        },
+        {
+          content: 'React와 Rails API 서버를 구현',
+        },
+      ],
+    },
+    {
       title: 'IaC 전환 CI/CD 파이프라인 구축',
       startedAt: '2021-01',
       where: '(주) 인썸니아',
@@ -16,6 +44,10 @@ const project: IProject.Payload = {
           content: '기존 모놀리식 서비스에서 몇 가지 서비스를 분리',
           weight: 'MEDIUM',
           descriptions: [
+            {
+              content:
+                '세 개의 스택 ( Rails, Nest, Django )에서 매번 동일한 서비스(기능)를 만들어야 해서 자주 사용하거나 구현이 까다로운 것들을 분리하여 재활용 할 수 있게 했습니다.',
+            },
             {
               content: '인증 서비스를 Cognito로 분리 Identity pool을 사용하여 리소스 권한 관리',
             },
@@ -34,11 +66,18 @@ const project: IProject.Payload = {
             },
           ],
         },
+        {
+          content: '인프라 프로비저닝 방식을 aws cdk으로 전환 ( Typescript )',
+          weight: 'MEDIUM',
+          descriptions: [
+            { content: '직접 aws console에서 관리하던 인프라를 aws cdk로 정의하고 배포' },
+          ],
+        },
       ],
     },
     {
       title: '히든피터',
-      startedAt: '2021-08',
+      startedAt: '2021-09',
       endedAt: '2021-09',
       subTitle: {
         role: '백업',
