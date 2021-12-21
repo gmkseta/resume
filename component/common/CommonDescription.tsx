@@ -1,4 +1,5 @@
 import React, { PropsWithChildren, CSSProperties } from 'react';
+import ReactMarkdown from 'react-markdown';
 import { IRow } from './IRow';
 import { HrefTargetBlank } from '.';
 
@@ -90,7 +91,11 @@ const Description = ({ description }: PropsWithChildren<{ description: IRow.Desc
         </li>
       );
     }
-    return <li style={getFontWeight(weight)}>{content}</li>;
+    return (
+      <li style={getFontWeight(weight)}>
+        <ReactMarkdown>{content}</ReactMarkdown>
+      </li>
+    );
   })();
 
   return component;
