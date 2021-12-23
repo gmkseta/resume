@@ -32,7 +32,7 @@ const project: IProject.Payload = {
       ],
     },
     {
-      title: 'IaC 전환 CI/CD 파이프라인 구축',
+      title: 'IaC 전환 및 서비스 분리',
       startedAt: '2021-01',
       where: '(주) 인썸니아',
       subTitle: {
@@ -53,17 +53,6 @@ const project: IProject.Payload = {
             },
             { content: '채팅 서비스를 AppSync, DynamoDB로 분리' },
             { content: '이미지 전처리 및 푸시 서비스 람다로 분리' },
-          ],
-        },
-        {
-          content: 'CI/CD 파이프라인 구축',
-          weight: 'MEDIUM',
-          descriptions: [
-            { content: 'Aws CodePipeline을 사용한 배포 자동화' },
-            { content: 'Nextjs serverless 배포 자동화' },
-            {
-              content: 'Cognito, S3, Rds, VPC, Lambda 배포 자동화',
-            },
           ],
         },
         {

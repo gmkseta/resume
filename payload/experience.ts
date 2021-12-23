@@ -12,7 +12,7 @@ const experience: IExperience.Payload = {
       position: 'Full Stack Developer',
       startedAt: '2019-11',
       descriptions: [
-        'Aws Codecommit, Codebuild을 이용한 CI/CD 파이프라인 구축',
+        'Rails 풀스택에서 React + API 서버 구조로 변경하기 위한 보일러플레이트 구성',
         '인프라를 IaC를 통해서 프로비저닝하는 방식으로 변경',
         '인증 서비스, 채팅 서비스, 스토리지 서비스 분리',
         '다양한 고객사 프로젝트 진행하면서 팀 관리 및 프로젝트 관리',

@@ -26,7 +26,7 @@ export const Style: Record<TStyleKey, CSSProperties> = {
     wordWrap: 'break-word',
     wordBreak: 'keep-all',
     lineHeight: 1.8,
-    // fontSize: '1.2em',
+    // fontSize: '1.2em', 프린트
   },
 
   sign: {
