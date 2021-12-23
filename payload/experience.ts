@@ -11,6 +11,7 @@ const experience: IExperience.Payload = {
         '스타트업 전문 외주 개발사입니다. 저는 21년도에 고객사 프로젝트 개발은 백업만 하고 사내 프로젝트 개발만 진행했습니다.',
       position: 'Full Stack Developer',
       startedAt: '2019-11',
+      endedAt: '2021-12',
       descriptions: [
         'Rails 풀스택에서 React + API 서버 구조로 변경하기 위한 보일러플레이트 구성',
         '인프라를 IaC를 통해서 프로비저닝하는 방식으로 변경',
