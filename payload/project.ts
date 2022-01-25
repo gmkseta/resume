@@ -4,8 +4,9 @@ const project: IProject.Payload = {
   disable: false,
   list: [
     {
-      title: '새로운 기술 스택( React & API )에 대한 보일러플레이트 구성',
+      title: '새로운 기술 스택( React & Rails API )에 대한 보일러플레이트 구성',
       startedAt: '2021-01',
+      endedAt: '2021-12',
       where: '(주) 인썸니아',
       subTitle: {
         role: '메인',
@@ -17,6 +18,11 @@ const project: IProject.Payload = {
         },
         {
           content: '프론트는 **React** 백엔드 API 서버를 **Rails, Nest, Django**로 확장하였습니다.',
+          descriptions: [
+            {
+              content: 'Rails를 주로 작업하였고 Django와 Nest는 설계에 관한 도움만 주었습니다.',
+            },
+          ],
         },
         {
           content:
@@ -34,6 +40,7 @@ const project: IProject.Payload = {
     {
       title: 'IaC 전환 및 서비스 분리',
       startedAt: '2021-01',
+      endedAt: '2021-12',
       where: '(주) 인썸니아',
       subTitle: {
         role: '메인',
@@ -61,36 +68,6 @@ const project: IProject.Payload = {
           descriptions: [
             { content: '직접 aws console에서 관리하던 인프라를 aws cdk로 정의하고 배포' },
           ],
-        },
-      ],
-    },
-    {
-      title: '히든피터',
-      startedAt: '2021-09',
-      endedAt: '2021-09',
-      subTitle: {
-        role: '백업',
-        skills: ['RoR', 'Nextjs'],
-      },
-      where: '(주) 인썸니아',
-      descriptions: [
-        {
-          content: '사용자의 체형에 따라 맞는 착장을 추천해주는 패션서비스입니다.',
-        },
-        {
-          content:
-            '사용자가 늘어남에 따라 체형을 계산하여 착장과 매칭하는 속도가 너무 느려져서 백업 요청받았습니다.',
-        },
-        {
-          content: '체형 매칭 알고리즘, 쿼리 개선 및 데이터베이스 구조를 개선하였습니다.',
-        },
-        {
-          content:
-            '체형을 계산하는 알고리즘 및 쿼리를 기존에 비해 약 1/8 정도의 시간을 소모하도록 변경할 수 있었습니다.',
-        },
-        {
-          content:
-            '매번 계산하여 보여주던 로직을 테이블을 생성하여 미리 저장하고 저장된 값을 보여주는 방식으로 속도를 더 개선할 수 있었습니다.',
         },
       ],
     },
@@ -150,6 +127,36 @@ const project: IProject.Payload = {
         { content: '교회 전용 주일학교 학생 관리 앱입니다. 웹앱, 어드민페이지를 개발했습니다.' },
         {
           content: '출석 및 통계 기능 풀스텍으로 개발했습니다.',
+        },
+      ],
+    },
+    {
+      title: '히든피터',
+      startedAt: '2021-09',
+      endedAt: '2021-09',
+      subTitle: {
+        role: '백업',
+        skills: ['RoR', 'Nextjs'],
+      },
+      where: '(주) 인썸니아',
+      descriptions: [
+        {
+          content: '사용자의 체형에 따라 맞는 착장을 추천해주는 패션서비스입니다.',
+        },
+        {
+          content:
+            '사용자가 늘어남에 따라 체형을 계산하여 착장과 매칭하는 속도가 너무 느려져서 백업 요청받았습니다.',
+        },
+        {
+          content: '체형 매칭 알고리즘, 쿼리 개선 및 데이터베이스 구조를 개선하였습니다.',
+        },
+        {
+          content:
+            '체형을 계산하는 알고리즘 및 쿼리를 기존에 비해 약 1/8 정도의 시간을 소모하도록 변경할 수 있었습니다.',
+        },
+        {
+          content:
+            '매번 계산하여 보여주던 로직을 테이블을 생성하여 미리 저장하고 저장된 값을 보여주는 방식으로 속도를 더 개선할 수 있었습니다.',
         },
       ],
     },
