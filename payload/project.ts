@@ -4,7 +4,7 @@ const project: IProject.Payload = {
   disable: false,
   list: [
     {
-      title: '새로운 기술 스택( React & Rails API )에 대한 보일러플레이트 구성',
+      title: '도입할 기술 스택( React & Rails API )에 대한 보일러플레이트 구성',
       startedAt: '2021-01',
       endedAt: '2021-12',
       where: '(주) 인썸니아',
