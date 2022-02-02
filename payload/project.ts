@@ -14,10 +14,7 @@ const project: IProject.Payload = {
       },
       descriptions: [
         {
-          content: '기존에 **Rails 풀스택만** 사용하던 스택을 21년도에 변경하게 되었습니다',
-        },
-        {
-          content: '프론트는 **React** 백엔드 API 서버를 **Rails, Nest, Django**로 확장하였습니다.',
+          content: '**Rails 풀스택**에서 **React** + **Rails, Nest, Django**로 확장하였습니다.',
           descriptions: [
             {
               content: 'React와 Rails API 서버 구현',
