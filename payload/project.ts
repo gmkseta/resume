@@ -4,7 +4,7 @@ const project: IProject.Payload = {
   disable: false,
   list: [
     {
-      title: '도입할 기술 스택( React & Rails API )에 대한 보일러플레이트 구성',
+      title: '재사용 가능한 공통 컴포넌트 개발 및 React & Rails API에 대한 보일러플레이트 구성',
       startedAt: '2021-01',
       endedAt: '2021-12',
       where: '(주) 인썸니아',
@@ -20,20 +20,24 @@ const project: IProject.Payload = {
           content: '프론트는 **React** 백엔드 API 서버를 **Rails, Nest, Django**로 확장하였습니다.',
           descriptions: [
             {
+              content: 'React와 Rails API 서버 구현',
+            },
+            {
               content: 'Rails를 주로 작업하였고 Django와 Nest는 설계에 관한 도움만 주었습니다.',
+            },
+            {
+              content:
+                '사원 분들 모두 **React** 경험이 없어서 먼저 스터디를 하고 Best Practice를 찾고 전파하려고 노력했습니다.',
             },
           ],
         },
         {
-          content:
-            '사원 분들 모두 **React** 경험이 없어서 먼저 스터디를 하고 Best Practice를 찾고 전파하려고 노력했습니다.',
-        },
-        {
-          content:
-            '프론트엔드는 리엑트 하나만 사용하고, 고객의 요청에 따라 백엔드 스택을 선택하여 사용하는 요구조건이 있었습니다.',
-        },
-        {
-          content: 'React와 Rails API 서버를 구현',
+          content: '외주 개발에서 자주 사용되는 컴포넌트를 재사용 가능하게 구현하였습니다.',
+          descriptions: [
+            {
+              content: '채팅, 회원관리, 커뮤니티, 쇼핑몰, 결제, 알림 등',
+            },
+          ],
         },
       ],
     },
@@ -58,7 +62,7 @@ const project: IProject.Payload = {
             {
               content: '인증 서비스를 Cognito로 분리 Identity pool을 사용하여 리소스 권한 관리',
             },
-            { content: '채팅 서비스를 AppSync, DynamoDB로 분리' },
+            { content: '채팅 서비스를 Aws AppSync로 분리' },
             { content: '이미지 전처리 및 푸시 서비스 람다로 분리' },
           ],
         },
