@@ -16,7 +16,7 @@ const experience: IExperience.Payload = {
         'Rails 풀스택에서 React + API 서버 구조로 변경하기 위한 보일러플레이트 구성',
         '인프라를 IaC를 통해서 프로비저닝하는 방식으로 변경',
         '인증 서비스, 채팅 서비스, 스토리지 서비스 분리',
-        '다양한 고객사 프로젝트 진행하면서 팀 관리 및 프로젝트 관리',
+
         {
           title: '[뉴젠] 교회 전용 주일학교 학생관리 앱 개발',
           descriptions: ['출석 및 통계 기능 백엔드 및 프론트엔드 개발'],
@@ -32,6 +32,7 @@ const experience: IExperience.Payload = {
             '실서버 운영 및 AWS 마이그레이션',
           ],
         },
+        '10여개 이상의 프로젝트 백업',
       ],
       skillKeywords: ['AWS', 'Ruby On Rails', 'Node.js', 'TypeScript', 'React', 'Nextjs'],
     },

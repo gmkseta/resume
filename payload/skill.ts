@@ -7,10 +7,7 @@ const backend: ISkill.Skill = {
       title: 'RoR',
       level: 3,
     },
-    {
-      title: 'Node.js',
-      level: 2,
-    },
+
     {
       title: 'Python',
       level: 2,
@@ -18,6 +15,18 @@ const backend: ISkill.Skill = {
     {
       title: 'Ruby',
       level: 2,
+    },
+    {
+      title: 'Node.js',
+      level: 2,
+    },
+    {
+      title: 'Java',
+      level: 1,
+    },
+    {
+      title: 'Spring',
+      level: 1,
     },
     {
       title: 'TypeScript',
