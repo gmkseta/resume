@@ -73,6 +73,10 @@ const devops: ISkill.Skill = {
       level: 2,
     },
     {
+      title: 'PostgreSQL',
+      level: 2,
+    },
+    {
       title: 'Docker',
       level: 1,
     },
