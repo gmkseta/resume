@@ -51,9 +51,9 @@ const getFormattingExperienceTotalDuration = (payload: IExperience.Payload) => {
     .filter((item) => item.type === 'full-time')
     .map((item) => ({
       endedAt: item.endedAt
-        ? DateTime.fromFormat(item.endedAt, LUXON_DATE_FORMAT.YYYY_LL)
+        ? DateTime.fromFormat(item.endedAt, LUXON_DATE_FORMAT.YYYY_LL_DD)
         : DateTime.local(),
-      startedAt: DateTime.fromFormat(item.startedAt, LUXON_DATE_FORMAT.YYYY_LL),
+      startedAt: DateTime.fromFormat(item.startedAt, LUXON_DATE_FORMAT.YYYY_LL_DD),
     }))
     .map(({ endedAt, startedAt }) => endedAt.plus({ month: 1 }).diff(startedAt));
   const totalExperience = durations.reduce((prev, cur) => prev.plus(cur), Duration.fromMillis(0));

@@ -6,12 +6,47 @@ const experience: IExperience.Payload = {
   list: [
     {
       type: 'full-time',
+      title: '(주) 카카오 모빌리티',
+      subtitle: '풀필먼트 개발팀 퀵 파트 팀원',
+      position: 'Backend Developer',
+      startedAt: '2022-02-28',
+      descriptions: [
+        {
+          title: '퀵 유저, 기사, 어드민 서비스 서버 개발 담당',
+          descriptions: [
+            '유저, 기사 휴면 및 탈퇴 처리 (w/ Kafka)',
+            '픽업/배송 기사 알림 기능 추가 및 리펙토링',
+            '퀵 쿠폰 템플릿 등록 및 조회 API',
+            '어드민 - 정산 리포트 자동 생성',
+          ],
+        },
+        {
+          title: '퀵 Open API 개발 담당',
+          descriptions: [
+            '예약 주문, 반나절 퀵, 안전배송 개발',
+            'Config로 관리되던 고객사 정보 DB화',
+            'API 사용 고객사 커뮤니케이션'
+          ],
+        },
+        {
+          title: '물류 신사업 프로젝트',
+          descriptions: [
+            'k8s 배포 및 kibana, sentry, grafana 설정 (테스트 서버)',
+            '프로젝트 설계 참여',
+            '주문 관련 API'
+          ],
+        },
+      ],
+      skillKeywords: ['Ruby On Rails', 'MySql', 'Kotlin', 'K8S', 'ELK'],
+    },
+    {
+      type: 'full-time',
       title: '(주) 인썸니아',
       subtitle:
         '스타트업 전문 외주 개발사입니다. 20년에는 고객사 프로젝트 개발을 21년에는 사내 프로젝트 개발, 팀원 백업을 위주로 했습니다.',
       position: 'Full Stack Developer',
-      startedAt: '2019-11',
-      endedAt: '2021-12',
+      startedAt: '2019-11-25',
+      endedAt: '2021-12-23',
       descriptions: [
         'Rails 풀스택에서 React + API 서버 구조로 변경하기 위한 보일러플레이트 구성',
         '인프라를 IaC를 통해서 프로비저닝하는 방식으로 변경',

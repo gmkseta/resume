@@ -18,6 +18,14 @@ export const getSkillColor = (skill: string) => {
     case 'node.js':
     case 'node':
       return '#3c873a';
+    case 'mysql':
+      return '#005D87';
+    case 'spring':
+      return '#6AAE3D';
+    case 'kotlin':
+      return '#716FDB';
+    case 'k8s':
+      return "#23B4E5";
     case 'aws':
     case 'aws cdk':
     case 'amazon web service':

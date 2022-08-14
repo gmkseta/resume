@@ -4,6 +4,7 @@ const introduce: IIntroduce.Payload = {
   disable: false,
   contents: [
     '안녕하세요. 개발자 김성준입니다.',
+    '',
     '주니어지만 작은 조직에서 테크리드 포지션으로 여러 팀을 관리하고 스타트업 고객사들의 문제를 엔지니어링으로 풀려고 고민했습니다.',
     '**능동적으로** 일을 찾고 만들어가며 일했습니다. gitflow, DevOps, lint, 사내 wiki, react 도입을 제안하고 실행했습니다.',
     '**4개**의 고객사 프로젝트를 개발하였고 성공적으로 출시하고 운영, 유지보수 하였습니다.',
@@ -13,7 +14,7 @@ const introduce: IIntroduce.Payload = {
   ],
   sign: 'Seongjun Kim',
   // sign: packageJson.author.name,
-  latestUpdated: '2022-02-08',
+  latestUpdated: '2022-08-14',
   // latestUpdated: lastestUpdatedAt,
 };
 

@@ -35,7 +35,7 @@ export declare namespace IExperience {
     /**
      * ### (직장)경험 종료 일
      *
-     * @format YYYY-MM
+     * @format YYYY-MM-dd
      * @example "2021-02"
      * @description 해당 값이 undefined 일 경우 **"재직 중"** 뱃지가 추가로 나타난다.
      */

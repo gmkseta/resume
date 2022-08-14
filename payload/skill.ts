@@ -7,11 +7,6 @@ const backend: ISkill.Skill = {
       title: 'RoR',
       level: 3,
     },
-
-    {
-      title: 'Python',
-      level: 2,
-    },
     {
       title: 'Ruby',
       level: 2,
@@ -21,17 +16,13 @@ const backend: ISkill.Skill = {
       level: 2,
     },
     {
-      title: 'Java',
+      title: 'Kotlin',
       level: 1,
     },
     {
       title: 'Spring',
       level: 1,
-    },
-    {
-      title: 'TypeScript',
-      level: 1,
-    },
+    }
   ],
 };
 
@@ -66,8 +57,12 @@ const frontend: ISkill.Skill = {
 };
 
 const devops: ISkill.Skill = {
-  category: 'DevOps',
+  category: 'etc',
   items: [
+    {
+      title: 'MySql',
+      level: 2,
+    },
     {
       title: 'AWS CDK',
       level: 2,
@@ -81,11 +76,11 @@ const devops: ISkill.Skill = {
       level: 1,
     },
     {
-      title: 'Ansible',
+      title: 'K8S',
       level: 1,
     },
     {
-      title: 'Terraform',
+      title: 'ELK',
       level: 1,
     },
   ],

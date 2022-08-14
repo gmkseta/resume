@@ -75,7 +75,9 @@ const createSkillKeywords = (skillKeywords?: string[]) => {
 
 const createWorkingPeriod = (startedAtString: string, endedAtString?: string) => {
   const DATE_FORMAT = LUXON_DATE_FORMAT;
-  const startedAt = DateTime.fromFormat(startedAtString, DATE_FORMAT.YYYY_LL);
+  const input_format = startedAtString.length > 8 ? DATE_FORMAT.YYYY_LL_DD : DATE_FORMAT.YYYY_LL;
+
+  const startedAt = DateTime.fromFormat(startedAtString, input_format);
 
   const {
     periodTitle,
@@ -89,7 +91,7 @@ const createWorkingPeriod = (startedAtString: string, endedAtString?: string) =>
       };
     }
 
-    const _endedAt = DateTime.fromFormat(endedAtString, DATE_FORMAT.YYYY_LL);
+    const _endedAt = DateTime.fromFormat(endedAtString, input_format);
     return {
       periodTitle: `${startedAt.toFormat(DATE_FORMAT.YYYY_DOT_LL)} ~ ${_endedAt.toFormat(
         DATE_FORMAT.YYYY_DOT_LL,
