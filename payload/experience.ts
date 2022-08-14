@@ -25,7 +25,7 @@ const experience: IExperience.Payload = {
           descriptions: [
             '예약 주문, 반나절 퀵, 안전배송 개발',
             'Config로 관리되던 고객사 정보 DB화',
-            'API 사용 고객사 커뮤니케이션'
+            'API를 사용하는 고객사들과의 커뮤니케이션'
           ],
         },
         {
