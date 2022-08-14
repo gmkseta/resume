@@ -33,7 +33,7 @@ const experience: IExperience.Payload = {
           descriptions: [
             'k8s 배포 및 kibana, sentry, grafana 설정 (테스트 서버)',
             '프로젝트 설계 참여',
-            '주문 관련 API'
+            '주문 관련 API',
           ],
         },
       ],
