@@ -4,21 +4,6 @@ const project: IProject.Payload = {
   disable: false,
   list: [
     {
-      title: '아파토',
-      startedAt: '2022-07',
-      where: '(주) 패스트솔루션',
-      link: 'https://www.apartor.com/',
-      subTitle: {
-        skills: ['ELK', 'Sentry'],
-      },
-      descriptions: [
-        { content: '지인에게 요청받아 가끔 설계 및 코드리뷰를 도와드리고 있습니다.' },
-        {
-          content: 'ELK 및 Sentry을 개인 서버에 on-premise로 간단하게 설정하였습니다.',
-        },
-      ],
-    },
-    {
       title: 'IaC 전환 및 서비스 분리',
       startedAt: '2021-01',
       endedAt: '2021-12',
