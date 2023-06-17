@@ -1,6 +1,6 @@
 import { ICommon } from '../common/ICommon';
 
-export declare namespace IIntroduce {
+export declare namespace IIntroduction {
   /**
    * ### Sample Rendering
    *

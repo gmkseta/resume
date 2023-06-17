@@ -9,6 +9,29 @@ import { IExperience } from './IExperience';
 const MdLi: React.FC<{ children: string }> = function ({ children }) {
   return <ReactMarkdown components={{ p: 'li' }}>{children}</ReactMarkdown>;
 };
+
+const DescriptionRow: React.FC<{ description: IExperience.Description; descIndex: number }> =
+  function ({ description, descIndex }) {
+    return typeof description === 'string' ? (
+      <MdLi key={descIndex.toString()}>{description}</MdLi>
+    ) : (
+      <li key={descIndex.toString()}>
+        {description.title}
+        <ul>
+          {description.descriptions?.map(
+            (subDescription: IExperience.Description, subDescIndex: number) => (
+              <DescriptionRow
+                key={typeof subDescription === 'string' ? subDescription : subDescription.title}
+                description={subDescription}
+                descIndex={subDescIndex}
+              />
+            ),
+          )}
+        </ul>
+      </li>
+    );
+  };
+
 const ExperienceRow = function ({
   item,
   index,
@@ -26,20 +49,13 @@ const ExperienceRow = function ({
 
           <i style={Style.gray}>{item.position}</i>
           <ul className="pt-3">
-            {item.descriptions?.map((description, descIndex) =>
-              typeof description === 'string' ? (
-                <MdLi key={descIndex.toString()}>{description}</MdLi>
-              ) : (
-                <li key={descIndex.toString()}>
-                  {description.title}
-                  <ul>
-                    {description.descriptions?.map((subDescription, subDescIndex) => (
-                      <MdLi key={`${descIndex}-${subDescIndex}`}>{subDescription}</MdLi>
-                    ))}
-                  </ul>
-                </li>
-              ),
-            )}
+            {item.descriptions?.map((description, descIndex) => (
+              <DescriptionRow
+                key={typeof description === 'string' ? description : description.title}
+                description={description}
+                descIndex={descIndex}
+              />
+            ))}
             {createSkillKeywords(item.skillKeywords)}
           </ul>
         </Col>

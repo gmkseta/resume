@@ -1,5 +1,5 @@
 import profile from './profile';
-import introduce from './introduce';
+import introduction from './introduction';
 import skill from './skill';
 import experience from './experience';
 import openSource from './openSource';
@@ -13,7 +13,7 @@ import footer from './footer';
 import { _global } from './_global';
 
 import { IProfile } from '../component/profile/IProfile';
-import { IIntroduce } from '../component/introduce/IIntroduce';
+import { IIntroduction } from '../component/introduce/IIntroduction';
 import { ISkill } from '../component/skill/ISkill';
 import { IOpenSource } from '../component/openSource/IOpenSource';
 import { IExperience } from '../component/experience/IExperience';
@@ -27,7 +27,7 @@ import { IArticle } from '../component/article/IArticle';
 
 const Payload: Payload = {
   profile,
-  introduce,
+  introduce: introduction,
   skill,
   openSource,
   experience,
@@ -43,7 +43,7 @@ const Payload: Payload = {
 
 interface Payload {
   profile: IProfile.Payload;
-  introduce: IIntroduce.Payload;
+  introduce: IIntroduction.Payload;
   skill: ISkill.Payload;
   openSource: IOpenSource.Payload;
   experience: IExperience.Payload;

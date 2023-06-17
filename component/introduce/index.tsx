@@ -5,9 +5,9 @@ import { Badge, Col, Row } from 'reactstrap';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
 import { Style } from '../common/Style';
 import { LUXON_DATE_FORMAT } from '../common/Utils';
-import { IIntroduce } from './IIntroduce';
+import { IIntroduction } from './IIntroduction';
 
-type Payload = IIntroduce.Payload;
+type Payload = IIntroduction.Payload;
 
 export const Introduce = {
   Component: ({ payload }: PropsWithChildren<{ payload: Payload }>) =>

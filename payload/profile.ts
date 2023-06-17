@@ -1,7 +1,6 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faPhone, faPenFancy } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 // import image from '/assets/profile.png';
-
 import { IProfile } from '../component/profile/IProfile';
 
 const profile: IProfile.Payload = {
@@ -27,11 +26,11 @@ const profile: IProfile.Payload = {
       link: 'https://github.com/gmkseta',
       icon: faGithub,
     },
-    {
-      title: 'https://blog.seongjun.kr',
-      link: 'https://blog.seongjun.kr',
-      icon: faPenFancy,
-    },
+    // {
+    //   title: 'https://blog.seongjun.kr',
+    //   link: 'https://blog.seongjun.kr',
+    //   icon: faPenFancy,
+    // },
   ],
   // notice: {
   //   title: '안녕하세요.  ',

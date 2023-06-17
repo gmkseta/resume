@@ -12,17 +12,17 @@ const backend: ISkill.Skill = {
       level: 2,
     },
     {
-      title: 'Node.js',
+      title: 'Kotlin',
       level: 2,
     },
     {
-      title: 'Kotlin',
-      level: 1,
+      title: 'Spring',
+      level: 2,
     },
     {
-      title: 'Spring',
-      level: 1,
-    }
+      title: 'Node.js',
+      level: 2,
+    },
   ],
 };
 
@@ -73,11 +73,11 @@ const devops: ISkill.Skill = {
     },
     {
       title: 'Docker',
-      level: 1,
+      level: 2,
     },
     {
       title: 'K8S',
-      level: 1,
+      level: 2,
     },
     {
       title: 'ELK',

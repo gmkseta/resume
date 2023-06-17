@@ -7,33 +7,61 @@ const experience: IExperience.Payload = {
     {
       type: 'full-time',
       title: '(주) 카카오 모빌리티',
-      subtitle: '풀필먼트 개발팀 퀵 파트 팀원',
+      subtitle: '풀필먼트개발팀 퀵파트',
       position: 'Backend Developer',
       startedAt: '2022-02-28',
       descriptions: [
         {
-          title: '퀵 유저, 기사, 어드민 서비스 서버 개발 담당',
+          title: '통합배송 파트',
           descriptions: [
-            '유저, 기사 휴면 및 탈퇴 처리 (w/ Kafka)',
-            '픽업/배송 기사 알림 기능 추가 및 리펙토링',
-            '퀵 쿠폰 템플릿 등록 및 조회 API',
-            '어드민 - 정산 리포트 자동 생성',
+            {
+              title: '파트너 API 개발',
+              descriptions: [
+                '배달의민족, 푸드테크, 바나나포스 등 파트너사들의 배달 주문을 받아 퀵 혹은 도보로 전달',
+              ],
+            },
+            {
+              title: '포스 프로그램 웹 API 개발',
+              descriptions: ['외부사 연동 설정', '공지사항, FAQ등', '배송목록', '결제수단 등록'],
+            },
+            {
+              title: '오픈 API 개발',
+              descriptions: [
+                '퀵,도보 통합배송 OPEN API',
+                'Technical Writer와 [OPEN API 문서](https://kakaomobility-documentation.notion.site/kakaomobility-documentation/T-API-ac9d997dff34409b8eb0cba5c4f223ec) 작성',
+                '개발자센터(8월 오픈예정) 샌드박스환경 구축',
+              ],
+            },
           ],
         },
         {
-          title: '퀵 Open API 개발 담당',
+          title: '퀵 파트',
           descriptions: [
-            '예약 주문, 반나절 퀵, 안전배송 개발',
-            'Config로 관리되던 고객사 정보 DB화',
-            'API를 사용하는 고객사들과의 커뮤니케이션'
-          ],
-        },
-        {
-          title: '물류 신사업 프로젝트',
-          descriptions: [
-            'k8s 배포 및 kibana, sentry, grafana 설정 (테스트 서버)',
-            '프로젝트 설계 참여',
-            '주문 관련 API',
+            {
+              title: '퀵 유저, 기사, 어드민 서비스 서버 개발 담당',
+              descriptions: [
+                '유저, 기사 휴면 및 탈퇴 처리 (w/ Kafka)',
+                '픽업/배송 기사 알림 기능 추가 및 리펙토링',
+                '퀵 쿠폰 템플릿 등록 및 조회 API',
+                '어드민 - 정산 리포트 자동 생성',
+              ],
+            },
+            {
+              title: '퀵 Open API 개발 담당',
+              descriptions: [
+                '예약 주문, 반나절 퀵, 안전배송 개발',
+                'Config로 관리되던 고객사 정보 DB화',
+                'API를 사용하는 고객사들과의 커뮤니케이션',
+              ],
+            },
+            {
+              title: '물류 신사업 프로젝트',
+              descriptions: [
+                'k8s 배포 및 kibana, sentry, grafana 설정 (테스트 서버)',
+                '프로젝트 설계 참여',
+                '주문 관련 API',
+              ],
+            },
           ],
         },
       ],
