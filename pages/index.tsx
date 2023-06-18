@@ -12,7 +12,6 @@ import { Introduce } from '../component/introduce';
 import { OpenSource } from '../component/openSource';
 import { Presentation } from '../component/presentation';
 import { Profile } from '../component/profile';
-import { Project } from '../component/project';
 import { Skill } from '../component/skill';
 import Payload from '../payload';
 
