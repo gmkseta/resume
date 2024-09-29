@@ -1,8 +1,8 @@
 :root {
-  --bs-primary: #6a1b8c;
-  --bs-primary-rgb: 106, 27, 140;
-  --bs-secondary: #9c49bf;
-  --bs-secondary-rgb: 156, 73, 191;
-  --bs-info: #bd6df2;
-  --bs-info-rgb: 189, 109, 242;
+  --bs-primary: #2e7d32;
+  --bs-primary-rgb: 46, 125, 50;
+  --bs-secondary: #388e3c;
+  --bs-secondary-rgb: 56, 142, 60;
+  --bs-info: #81c784;
+  --bs-info-rgb: 129, 199, 132;
 }

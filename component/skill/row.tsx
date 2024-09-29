@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import { Badge, Col, Row } from 'reactstrap';
+import { Col, Row } from 'reactstrap';
 import { Style } from '../common/Style';
 import { customDebug } from '../common/Utils';
 import { ISkill } from './ISkill';
@@ -51,7 +51,7 @@ const createCalculatedSkillItems = (items: ISkill.Item[]) => {
           <ul>
             {skills.map((skill, skillIndex) => (
               <li key={skillIndex.toString()}>
-                {createBadge(skill.level)}
+                {/* {createBadge(skill.level)} */}
                 {skill.title}
               </li>
             ))}
@@ -62,33 +62,33 @@ const createCalculatedSkillItems = (items: ISkill.Item[]) => {
   );
 };
 
-const createBadge = (level?: ISkill.Item['level']) => {
-  if (!level) {
-    return '';
-  }
-
-  const options = (() => {
-    switch (level) {
-      case 3: {
-        return { color: 'primary' };
-      }
-      case 2: {
-        return { color: 'secondary' };
-      }
-      case 1:
-      default: {
-        return { color: 'light', className: 'text-dark' };
-      }
-    }
-  })();
-
-  return (
-    <span>
-      <Badge pill {...options}>
-        {level}
-      </Badge>{' '}
-    </span>
-  );
-};
+// const createBadge = (level?: ISkill.Item['level']) => {
+//   if (!level) {
+//     return '';
+//   }
+//
+//   const options = (() => {
+//     switch (level) {
+//       case 3: {
+//         return { color: 'primary' };
+//       }
+//       case 2: {
+//         return { color: 'secondary' };
+//       }
+//       case 1:
+//       default: {
+//         return { color: 'light', className: 'text-dark' };
+//       }
+//     }
+//   })();
+//
+//   return (
+//     <span>
+//       <Badge pill {...options}>
+//         {level}
+//       </Badge>{' '}
+//     </span>
+//   );
+// };
 
 export default SkillRow;
