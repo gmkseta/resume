@@ -60,9 +60,13 @@ const ExperienceRow = function ({
         </Col>
         <Col sm={12} md={9}>
           <h4>{item.title}</h4>
-          {item.subtitle ? <div style={Style.gray}>{item.subtitle}</div> : ''}
-
           <i style={Style.gray}>{item.position}</i>
+          {item.subtitle ? (
+            <div style={Style.gray} dangerouslySetInnerHTML={{ __html: item.subtitle }} />
+          ) : (
+            ''
+          )}
+
           <div className="pt-3">
             {item.descriptions?.map((description, descIndex) => (
               <DescriptionRow

@@ -7,7 +7,11 @@ const experience: IExperience.Payload = {
     {
       type: 'full-time',
       title: '(주) 카카오 모빌리티',
-      subtitle: '물류&에이전트 개발실 통합연계개발파트 파트장',
+      subtitle: `물류&에이전트 개발실 <br/> <li>통합연계개발파트 파트장 24.03 ~ Current</li>
+    <li>통합연계개발셀 셀장 23.11~23.03</li> 
+    <li>통합연계개발 TF장 22.10~23.11</li> 
+    <li>퀵파트 파트원 22.02~23.11</li>
+`,
       position: 'Backend Developer',
       startedAt: '2022-02-28',
       descriptions: [
