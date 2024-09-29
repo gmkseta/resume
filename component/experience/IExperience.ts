@@ -15,7 +15,9 @@ export declare namespace IExperience {
     disableTotalPeriod?: boolean;
   }
 
-  type Description = string | { title: string; descriptions: Description[] };
+  type Description =
+    | string
+    | { title: string; descriptions: Description[]; skillKeywords?: string[] };
 
   export interface Item {
     /** ### (직장)경험 명 */

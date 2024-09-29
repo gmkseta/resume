@@ -7,38 +7,51 @@ const experience: IExperience.Payload = {
     {
       type: 'full-time',
       title: '(주) 카카오 모빌리티',
-      subtitle: '풀필먼트개발팀 퀵파트',
+      subtitle: '물류&에이전트 개발실 통합연계개발파트 파트장',
       position: 'Backend Developer',
       startedAt: '2022-02-28',
       descriptions: [
         {
-          title: '통합배송 파트',
+          title: '통합연계개발파트 파트장',
+          skillKeywords: ['Kotlin', 'Spring', 'MySql', 'K8S', 'ELK'],
           descriptions: [
+            '처음 통합연계개발 TF가 만들어질때 직접 자원하여 여러 내부 버티컬들을 통합하는 일들을 시작하게되었습니다.\n' +
+              '원래 오지랖이 넓고 호기심이 많아서 다른 버티컬들의 서비스 및 코드와 인프라들에대한 이해도가 어느정도 있어서 어려움이 없었습니다. \n' +
+              '또한 외부사와의 소통도 적극적으로 하는편이라 파트원 분들이 저보다 연차가 높으셨지만 리드에 잘 따라주셨습니다.\n' +
+              '지난 1년간 API를 통한 퀵 접수는 2배이상 성장하였고, 로봇배송은 처음으로 외부사와 연동하여 성공적으로 서비스를 오픈했습니다.',
             {
-              title: '파트너 API 개발',
+              title: 'OPEN API, Partner API 개발',
               descriptions: [
-                '배달의민족, 푸드테크, 바나나포스 등 파트너사들의 배달 주문을 받아 퀵 혹은 도보로 전달',
+                '배달 플랫폼, POS사, 주선사, 대기업 그리고 스타트업들까지 라스트마일에서의 다양한 회사들을 만나볼 수 있었습니다.',
+                '외부사와의 커뮤니케이션, 그리고 개발부터 운영유지보수에있어 다양한 이슈들을 경험하고 해결했습니다.',
+                '온/오프라인 미팅 및 개발 협업을 통해 다양한 사람들과 소통하고 조율하는 능력을 기를 수 있었습니다.',
+                '(배민스토어, 요기요, 땡겨요, 바나나포스, 푸드테크, 바나모빌리티, 디버, 손자, SK PSNM, 삼성전자판매, 그외 스타트업)',
+              ],
+            },
+            {
+              title: '개발자센터',
+              descriptions: [
+                'Technical Writer와 협업하여 Open API 문서를 작성하고, API key를 발급받고 관리하는 개발자센터를 개발하였습니다.',
+                '또한 SANDBOX 환경에서 API를 테스트해볼 수 있는 환경을 구축하였습니다.',
+                'API에서는 주문 접수 및 조회의 기능을 제공하고있으며 배달 서비스를 사용하는 API입니다.',
+                '이떄 기사측의 동작에 따른 오더의 상태변화 확인이 어려워서 따로 기사앱의 시뮬레이터를 웹으로 만들어서 제공하였습니다.',
+                '따로 기획이나 디자인, 프론트없이 직접 백엔드부터 프론트엔드까지 개발하였습니다.',
+                '이를 통해 매번 연동사와 슬렉이나 카톡으로 연동테스트를 진행하던 것 들을 **줄일 수 있었습니다.**',
+                '[카카오모빌리티 풀필먼트 개발자센터](https://logistics-developers.kakaomobility.com/)',
               ],
             },
             {
               title: '포스 프로그램 웹 API 개발',
               descriptions: ['외부사 연동 설정', '공지사항, FAQ등', '배송목록', '결제수단 등록'],
             },
-            {
-              title: '오픈 API 개발',
-              descriptions: [
-                '퀵,도보 통합배송 OPEN API',
-                'Technical Writer와 [OPEN API 문서](https://kakaomobility-documentation.notion.site/kakaomobility-documentation/T-API-ac9d997dff34409b8eb0cba5c4f223ec) 작성',
-                '개발자센터(8월 오픈예정) 샌드박스환경 구축',
-              ],
-            },
           ],
         },
         {
-          title: '퀵 파트',
+          title: '퀵 파트 파트원',
+          skillKeywords: ['Ruby On Rails', 'MySql', 'K8S', 'ELK'],
           descriptions: [
             {
-              title: '퀵 유저, 기사, 어드민 서비스 서버 개발 담당',
+              title: '퀵 유저 API, 기사 API, 어드민 서버 개발 담당',
               descriptions: [
                 '유저, 기사 휴면 및 탈퇴 처리 (w/ Kafka)',
                 '픽업/배송 기사 알림 기능 추가 및 리펙토링',
@@ -65,7 +78,6 @@ const experience: IExperience.Payload = {
           ],
         },
       ],
-      skillKeywords: ['Ruby On Rails', 'MySql', 'Kotlin', 'K8S', 'ELK'],
     },
     {
       type: 'full-time',
