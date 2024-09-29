@@ -48,7 +48,7 @@ const experience: IExperience.Payload = {
         },
         {
           title: '퀵 파트 파트원',
-          skillKeywords: ['Ruby On Rails', 'MySql', 'K8S', 'ELK'],
+          skillKeywords: ['Ruby', 'Ruby On Rails', 'MySql', 'K8S', 'ELK'],
           descriptions: [
             {
               title: '퀵 유저 API, 기사 API, 어드민 서버 개발 담당',
@@ -65,14 +65,6 @@ const experience: IExperience.Payload = {
                 '예약 주문, 반나절 퀵, 안전배송 개발',
                 'Config로 관리되던 고객사 정보 DB화',
                 'API를 사용하는 고객사들과의 커뮤니케이션',
-              ],
-            },
-            {
-              title: '물류 신사업 프로젝트',
-              descriptions: [
-                'k8s 배포 및 kibana, sentry, grafana 설정 (테스트 서버)',
-                '프로젝트 설계 참여',
-                '주문 관련 API',
               ],
             },
           ],
