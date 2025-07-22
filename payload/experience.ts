@@ -7,14 +7,29 @@ const experience: IExperience.Payload = {
     {
       type: 'full-time',
       title: '(주) 카카오 모빌리티',
-      subtitle: `물류&에이전트 개발실 <br/> <li>통합연계개발파트 파트장 24.03 ~ Current</li>
-    <li>통합연계개발셀 셀장 23.11~23.03</li> 
-    <li>통합연계개발 TF장 22.10~23.11</li> 
-    <li>퀵파트 파트원 22.02~23.11</li>
+      subtitle: `물류&에이전트 개발실 <br/>
+    <li>퀵파트 파트장 25.01 ~ Current</li>
+    <li>GOS파트 파트원 25.01 ~ Current</li> 
+    <li>통합연계개발파트 파트장 22.10 ~ Current</li>
+    <li>퀵파트 파트원 22.02 ~ 22.10</li>
 `,
       position: 'Backend Developer',
       startedAt: '2022-02-28',
       descriptions: [
+        {
+          title: 'GOS(Gerneral Order Service) 파트 파트원',
+          skillKeywords: ['Kotlin', 'Spring', 'MySql', 'K8S', 'ELK'],
+          descriptions: [
+            {
+              title: '코틀린 전환 프로젝트',
+              descriptions: ['Rails로 되어있는 프로젝트를 Kotlin Spring으로 전환하는 프로젝트'],
+            },
+            {
+              title: '픽커 대리 통합',
+              descriptions: ['(구)대리 기사앱을 카카오 픽커 앱에 통합하는 프로젝트'],
+            },
+          ],
+        },
         {
           title: '통합연계개발파트 파트장',
           skillKeywords: ['Kotlin', 'Spring', 'MySql', 'K8S', 'ELK'],
@@ -51,7 +66,7 @@ const experience: IExperience.Payload = {
           ],
         },
         {
-          title: '퀵 파트 파트원',
+          title: '퀵 파트 파트원/파트장',
           skillKeywords: ['Ruby', 'Ruby On Rails', 'MySql', 'K8S', 'ELK'],
           descriptions: [
             {
