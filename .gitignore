@@ -104,3 +104,6 @@ dist
 .tern-port
 
 .DS_Store
+
+# Analysis files
+이력서_분석_결과.md

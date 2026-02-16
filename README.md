@@ -18,6 +18,13 @@
 - Sample: https://uyu423.github.io/resume-nextjs
   - 더 많은 예제는 [EXAMPLE.md](https://github.com/uyu423/resume-nextjs/blob/master/EXAMPLE.md) 를 참고한다.
 
+## 📚 Documentation
+
+- **[Quick Start Guide](docs/QUICK_START.md)** - 10분 만에 이력서 만들기
+- **[Project Documentation](docs/PROJECT_DOCUMENTATION.md)** - 프로젝트 구조와 아키텍처 이해하기
+- **[API Reference](docs/API_REFERENCE.md)** - TypeScript 인터페이스와 컴포넌트 API 상세 문서
+- **[백엔드 개발자 자기소개 가이드](docs/백엔드_개발자_자기소개_가이드.md)** - 합격하는 자기소개 작성법
+
 ## Install
 
 ```bash
