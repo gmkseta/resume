@@ -7,29 +7,32 @@ const experience: IExperience.Payload = {
     {
       type: 'full-time',
       title: '(주) 카카오 모빌리티',
-      subtitle: `라스트마일개발팀 팀장 25.12 ~ Current <br/>
-    <li>퀵파트 파트장 25.01 ~ Current</li>
-    <li>GOS파트 파트장 25.01 ~ Current</li>
-    <li>통합연계개발파트 파트장 22.10 ~ Current</li>
-    <li>퀵파트 파트원 22.02 ~ 22.10</li>
+      subtitle: `<div>라스트마일개발팀 팀장 25.12 ~ Current</div>
+    <div>퀵파트 파트장 25.01 ~ Current</div>
+    <div>GOS파트 파트장 25.01 ~ Current</div>
+    <div>통합연계개발파트 파트장 22.10 ~ Current</div>
+    <div>퀵파트 파트원 22.02 ~ 22.10</div>
 `,
       position: 'Backend Developer',
       startedAt: '2022-02-28',
       descriptions: [
-        '천만 MAU 카카오T 앱의 퀵/도보 서비스 담당 - 일 평균 1,700만+ API 요청 처리',
-        '퀵/도보 서비스 매년 50% 이상 성장을 기술적으로 뒷받침',
-        '타 버티컬 대비 가장 빠른 실시간 장애 대응 체계 구축',
+        {
+          title: '라스트마일개발팀 팀장',
+          descriptions: [
+            '퀵, 도보, 당일배송 개발 파트 리드 (10여 명)',
+            '퀵·도보 시스템 통합',
+          ],
+        },
         {
           title: '퀵 파트 파트원/파트장',
           skillKeywords: ['Ruby', 'Ruby On Rails', 'MySQL', 'Redis', 'Kafka', 'K8S', 'Sentry', 'New Relic'],
           descriptions: [
+            '카카오T 앱의 퀵 서비스 담당 - 일 평균 1,700만+ API 요청 처리',
             '매년 50% 이상 서비스 성장을 기술적으로 뒷받침',
-            'Feature Toggle 도입으로 배포 없이 즉시 기능 제어 가능',
-            '타 버티컬 대비 가장 빠른 장애 대응 체계 구축',
             {
               title: 'Google Cloud Gemini AI 도입 프로젝트 리드',
               descriptions: [
-                'AI 기반 주소 자동 입력 기능 개발로 사용자 경험 혁신',
+                'AI 기반 주소 자동 입력 기능 개발로 사용자 경험 개선',
                 '신규 사용자 접수 시간 24% 감소, 접수 완료율 13.39%p 증가',
                 '프롬프트 인젝션 보안 취약점 해결 및 Fallback 로직 구현',
                 'Google Cloud 공식 블로그에 성공 사례로 소개',
@@ -38,6 +41,7 @@ const experience: IExperience.Payload = {
             {
               title: '시스템 안정성 및 성능 최적화',
               descriptions: [
+                'Feature Toggle 도입으로 배포 없이 즉시 기능 제어 가능',
                 'Circuit Breaker 도입으로 외부 서비스 장애 전파 차단',
                 'Pod 메모리 누수 해결: Puma cluster mode에서 inmemory cache → Redis 중앙화',
                 'Sentry/New Relic 알림 체계 개선으로 실시간 장애 감지',
@@ -50,7 +54,6 @@ const experience: IExperience.Payload = {
                 '픽업/배송 목표시간 설정 기능 개발로 기사 효율성 향상',
                 '대형오더 시스템 개선 - 화물차 매칭 로직 최적화',
                 '예약 주문, 반나절 퀵, 안전배송 등 신규 서비스 개발',
-                '주간 업무 리포트 67주간 425개 고유 업무 수행',
               ],
             },
           ],
@@ -59,9 +62,9 @@ const experience: IExperience.Payload = {
           title: '통합연계개발파트 파트장',
           skillKeywords: ['Kotlin', 'Spring', 'MySQL', 'Redis', 'Docker', 'React', 'K8S', 'ELK'],
           descriptions: [
-            '직접 자원하여 통합연계개발 TF 초기 멤버로 참여, 파트장으로 성장',
+            '자발적으로 통합연계개발 TF 초기 멤버로 참여, 파트장으로 성장',
             '20여개 파트너사 API 연동으로 B2B 비즈니스 확대 - API 통한 주문 2배 이상 성장',
-            '외부사 연동 공수 90% 절감 (월 1명 → 자동화) 달성',
+            '외부사 연동 공수 90% 절감 (월 1명 → 자동화)',
             {
               title: 'OPEN API 고도화 및 자동화',
               descriptions: [
@@ -83,7 +86,7 @@ const experience: IExperience.Payload = {
               ],
             },
             {
-              title: '프로세스 혁신',
+              title: '운영 프로세스 개선',
               descriptions: [
                 '챗봇 도입 및 채널톡 연동으로 화주사 응대 효율화',
                 'Integration Batch 도입으로 잘못된 데이터 자동 보정',
