@@ -32,7 +32,7 @@ const project: IProject.Payload = {
             {
               content:
                 'Google Cloud 공식 블로그에 성공 사례로 소개',
-              link: 'https://cloud.google.com/blog/ko/topics/customers/kakao-t-quick-delivery-gemini-use-case',
+              href: 'https://cloud.google.com/blog/ko/topics/customers/kakao-t-quick-delivery-gemini-use-case',
             },
           ],
         },

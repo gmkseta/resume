@@ -7,9 +7,9 @@ const experience: IExperience.Payload = {
     {
       type: 'full-time',
       title: '(주) 카카오 모빌리티',
-      subtitle: `물류&에이전트 개발실 <br/>
+      subtitle: `라스트마일개발팀 팀장 25.12 ~ Current <br/>
     <li>퀵파트 파트장 25.01 ~ Current</li>
-    <li>GOS파트 파트원 25.01 ~ Current</li> 
+    <li>GOS파트 파트장 25.01 ~ Current</li>
     <li>통합연계개발파트 파트장 22.10 ~ Current</li>
     <li>퀵파트 파트원 22.02 ~ 22.10</li>
 `,
@@ -93,7 +93,7 @@ const experience: IExperience.Payload = {
           ],
         },
         {
-          title: 'GOS(General Order Service) 파트 파트원',
+          title: 'GOS(General Order Service) 파트 파트장',
           skillKeywords: ['Kotlin', 'Spring Boot', 'MySQL', 'K8S', 'Redis', 'ELK'],
           descriptions: [
             {
