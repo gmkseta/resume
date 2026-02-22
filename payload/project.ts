@@ -15,7 +15,7 @@ const project: IProject.Payload = {
       descriptions: [
         {
           content: '수요측 성장: 사용자 경험 혁신을 통한 접수 증가',
-          weight: 'HIGH',
+          weight: 'BOLD',
           descriptions: [
             {
               content:
@@ -38,7 +38,7 @@ const project: IProject.Payload = {
         },
         {
           content: '공급측 성장: 기사 효율성 향상 및 운영 최적화',
-          weight: 'HIGH',
+          weight: 'BOLD',
           descriptions: [
             {
               content:
@@ -68,7 +68,7 @@ const project: IProject.Payload = {
       descriptions: [
         {
           content: '주요 장애 대응 및 해결 사례',
-          weight: 'HIGH',
+          weight: 'BOLD',
           descriptions: [
             {
               content:
@@ -90,7 +90,7 @@ const project: IProject.Payload = {
         },
         {
           content: '장애 대응 체계 구축',
-          weight: 'HIGH',
+          weight: 'BOLD',
           descriptions: [
             {
               content:
@@ -121,7 +121,7 @@ const project: IProject.Payload = {
       descriptions: [
         {
           content: 'API 연동 프로세스 혁신',
-          weight: 'HIGH',
+          weight: 'BOLD',
           descriptions: [
             {
               content:
@@ -139,7 +139,7 @@ const project: IProject.Payload = {
         },
         {
           content: '개발자센터 풀스택 개발',
-          weight: 'HIGH',
+          weight: 'BOLD',
           descriptions: [
             {
               content:
@@ -169,7 +169,7 @@ const project: IProject.Payload = {
       descriptions: [
         {
           content: 'Rails 기반 GOS를 Kotlin 기반 KGOS로 전환하며 대규모 서비스 통합',
-          weight: 'HIGH',
+          weight: 'BOLD',
           descriptions: [
             {
               content:
