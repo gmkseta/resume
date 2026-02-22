@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "anon.seongjun.kr" }],
+      "destination": "/anon"
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "anon.seongjun.kr" }],
+      "destination": "/anon"
+    }
+  ]
+}
