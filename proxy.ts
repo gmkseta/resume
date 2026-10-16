@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 // eslint-disable-next-line import/prefer-default-export
-export const middleware = (req: NextRequest) => {
+export const proxy = (req: NextRequest) => {
   const hostname = req.headers.get('host') || '';
   const { pathname } = req.nextUrl;
 

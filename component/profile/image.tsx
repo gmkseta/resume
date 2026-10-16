@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/legacy/image';
 
 const ProfileImage = function ({ src }: PropsWithChildren<{ src: string | StaticImageData }>) {
   return (

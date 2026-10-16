@@ -1,3 +1,4 @@
+import type { StaticImageData } from 'next/image';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { ICommon } from '../common/ICommon';
 
